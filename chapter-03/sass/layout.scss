@@ -81,6 +81,17 @@ header[role="banner"] {
 
 @media screen and (min-width: 55.5em) {
   /* 888 =================================================== */
+  section[role="content"] {
+    float: right;
+  }
+
+  footer[role="contentinfo"] .four.columns {
+    width: 49%;
+
+    &:nth-of-type(3) {
+      margin-left: 0;
+    }
+  }
 }
 
 @media only screen and (min-width: 61.5em) {
@@ -91,6 +102,13 @@ header[role="banner"] {
 	nav{
 	float:right;
 	}
+
+  footer[role="contentinfo"] .four.columns {
+    width: 23.5%;
+    &:nth-of-type(3) {
+      margin-left: 2%;
+    }
+  }
 }
 
 @media only screen and (min-width: 75em) {

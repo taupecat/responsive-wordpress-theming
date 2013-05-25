@@ -683,8 +683,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-weight: inherit; }
 
 h1 {
-  font-size: 6.875em;
-  margin-bottom: 0.19091em; }
+  font-size: 4.5em;
+  margin-bottom: 0.29167em; }
 
 h2 {
   font-size: 2.625em;
@@ -3450,14 +3450,26 @@ header[role="banner"] {
 @media only screen and (min-width: 45em) {
   /* 720 =================================================== */ }
 @media screen and (min-width: 55.5em) {
-  /* 888 =================================================== */ }
+  /* 888 =================================================== */
+  section[role="content"] {
+    float: right; }
+
+  footer[role="contentinfo"] .four.columns {
+    width: 49%; }
+    footer[role="contentinfo"] .four.columns:nth-of-type(3) {
+      margin-left: 0; } }
 @media only screen and (min-width: 61.5em) {
   /* 984 =================================================== */
   .logo {
     float: left; }
 
   nav {
-    float: right; } }
+    float: right; }
+
+  footer[role="contentinfo"] .four.columns {
+    width: 23.5%; }
+    footer[role="contentinfo"] .four.columns:nth-of-type(3) {
+      margin-left: 2%; } }
 @media only screen and (min-width: 75em) {
   /* 1200 =================================================== */ }
 @media only screen and (min-width: 87em) {

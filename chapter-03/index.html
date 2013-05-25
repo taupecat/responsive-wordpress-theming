@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<!-- 
-Wirefy by Chris Da Sie
-Version: 2.1.1
+<!--
+Sidebar Template
+Author: Chris Da Sie [http://chrisdasie.com]
+Version: 2.0.6
 URL: https://getwirefy.com
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 -->
@@ -21,10 +22,11 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 ================================================= -->
  <meta charset="utf-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
- <title>Wirefy | The Responsive Wireframe Boilerplate</title>
- <meta name="description" content="">
- <meta name="author" content="">
- 
+ <title>Wirefy | Sidebar Template</title>
+ <meta name="description" content=""><!-- Why don't we add a brief decription here -->
+ <meta name="author" content=""><!-- Are you the creator? Put your name here -->
+
+
  <!-- Mobile Specific Metas
 ================================================= -->
  <meta name="HandheldFriendly" content="True">
@@ -32,76 +34,136 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
 
 
- 
- 
- <!-- CSS - These are your main CSS files. All base styles can be found in the base.css and any additional styles 
- or overwrites should be used in the layout.css. We have now added support for SCSS. Using CodeKit or a similar preprocessor will help you write and rewrite the SCSS files.  
+ <!-- CSS - These are your main CSS files. All base styles can be found in the base.css and any additional styles
+ or overwrites should be used in the layout.css. We have now added support for SASS. Using CodeKit or a similar preprocessor
+will help you write and rewrite the SCSS files.
 ================================================= -->
- <link rel="stylesheet" href="css/layout.css"> <!-- Compiled from layout.scss -->
- 
- <!-- Browser Specific Javascript
-================================================= -->
+ <link rel="stylesheet" href="../css/layout.css" media="screen"> <!-- Compiled from layout.scss -->
+
  <script src="js/vendor/modernizr.js"></script>
 
+ <!-- Browser Specific Javascript
+================================================= -->
  <!--[if (lt IE 9) & (!IEMobile)]>
  <script src="js/vendor/selectivizr-min.js"></script>
  <link rel="stylesheet" href="css/base-ie.css">
  <link rel="stylesheet" href="css/layout-ie.css">
  <![endif]-->
 
-<!-- Prevents links from opening in mobile Safari -->
- <!-- <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script> -->
 
- <!-- Favicon and apple-touch-icon.png in the img folder. Include the ones you need.
+
+ <!-- Favicon
  ================================================== -->
  <link rel="shortcut icon" href="img/startup/favicon.ico">
 
+ <!-- Prevents links from opening in mobile Safari -->
+ <!-- <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script> -->
 
- <!-- Windows 8 startup screen
- ================================================== -->
-<meta name="application-name" content="Wirefy | The Responsive Wireframe Framework"/> 
-<meta name="msapplication-TileColor" content="#111111"/> 
-<meta name="msapplication-TileImage" content="img/22905266-8309-4b75-aa81-6d270415e8d7.png"/>
- 
  <!-- Font Smoothing FF/Windows
  ================================================== -->
  <meta http-equiv="cleartype" content="on">
 
 </head>
-
 <body>
-  <!--[if lt IE 7]>
-  <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-  <![endif]-->
-	
-  <!-- Begin adding your site or application content here -->
+	<!-- Add your site or application content here -->
+  <div class="container clearfix">
 
   <!-- This is the header information. You can add things like logos and navigation here. -->
-  <header role="banner" class="row">
-    <nav role="navigation" id="nav" class="toggle">
-    </nav>
-  </header>
-			
-  <!-- The Main content area can be used to create lots of different block areas. 
-  As Jeffery Zeldman once said, "Content precedes design. Design in the absence 
-  of content is not design, it's decoration." -->
-			
-  <div role="main" class="content">
-  </div>
-	
-  <!-- This is you can place your footer information like menu links, contact information, etc -->		
-  <footer role="contentinfo" class="clearfix">
-  </footer>
+    <header role="banner" class="clearfix">
+	  <div class="logo four columns">
+	    <h1><img src="http://placehold.it/250x100&text=[Sidebar Logo]"></h1>
+	  </div>
+	  <div class="eleven columns">
+	  	<h1>Our Great Site</h1>
+	  	<div class="subtitle">Just another responsive WordPress theme.</div>
+	  </div>
+    </header>
+	<!-- End Of Header -->
+	<!-- Navigation. This navigation uses the three line approach for small viewports. Check documentation for other examples -->
+	  <div class="menu-button">Menu</div>
+	  <a href="#main" class="skip">Skip navigation</a>
+	  <nav role="navigation" id="nav" class="toggle sixteen columns">
+	    <ul>
+		  <li class="top-level"><a href="">Link 1</a></li>
+		  <li class="top-level"><a href="">Link 2</a></li>
+		  <li class="top-level"><a href="">Link 3</a></li>
+		  <li class="top-level"><a href="">Link 4</a></li>
+		  <li class="top-level"><a href="">Link 5</a></li>
+	    </ul>
+      </nav>
+	<!-- End Of Navigation -->
 
-  <!-- JS - Add or remove any of the scripts to suit the functionality you wish to display. 
+    <div role="main" class="content clearfix">
+ 	  <section class="row">
+
+	  <!-- Main Content Container -->
+
+		<section class="eleven columns" role="content">
+		  <div>
+			<h2>Content Title</h2>
+			<h4>Content Subtitle</h4>
+			<p>This is dummy text and is not meant to be read. Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum. Non sequitur condominium facile et geranium incognito. Epsum factorial non deposit quid pro quo hic escorol. Marquee selectus non provisio incongruous feline nolo contendre Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum.</p>
+			<p>This is dummy text and is not meant to be read. Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum. Non sequitur condominium facile et geranium incognito. Epsum factorial non deposit quid pro quo hic escorol. Marquee selectus non provisio incongruous feline nolo contendre Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum.</p>
+
+			<p>This is dummy text and is not meant to be read. Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum. Non sequitur condominium facile et geranium incognito. Epsum factorial non deposit quid pro quo hic escorol. Marquee selectus non provisio incongruous feline nolo contendre Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum.</p>
+		  </div>
+		</section>
+		<!-- End Of Main Content -->
+
+		<!-- Sidebar Container -->
+		<aside class="four columns">
+			<h5>Categories</h5>
+			      <ul class="side-nav">
+			        <li><a href="#">News</a></li>
+			        <li><a href="#">Code</a></li>
+			        <li><a href="#">Design</a></li>
+			        <li><a href="#">Fun</a></li>
+			        <li><a href="#">Weasels</a></li>
+			      </ul>
+
+			      <div class="callout">
+			        <h5>Callout Special</h5>
+			        <p>This is dummy text and is not meant to be read. Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium</p>
+			        <a href="#">Read More <i class="icon-chevron-right"></i></a>
+			      </div>
+		</aside>
+
+
+ 	  </section>
+	  <!-- End Main Content and Sidebar -->
+
+   	</div><!-- End Of Content -->
+	<!-- Footer -->
+
+
+	  <!-- Footer -->
+	  <hr>
+<footer role="contentinfo" class="row">
+<div class="four columns callout">
+	Footer Widget Area 1
+</div>
+<div class="four columns callout">
+	Footer Widget Area 2
+</div>
+<div class="four columns callout">
+	Footer Widget Area 3
+</div>
+<div class="four columns callout">
+	Footer Widget Area 4
+</div>
+</footer><!-- End Of Footer -->
+
+  </div><!-- End Of Container -->
+
+  <!-- JS - Add or remove any of the scripts to suit the functionality you wish to display.
   ================================================== -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/helper.js"></script>
-  
-  
+  <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="../js/plugins.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/helper.js"></script>
+
+
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
      mathiasbynens.be/notes/async-analytics-snippet -->
   <script>
