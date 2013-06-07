@@ -1,0 +1,176 @@
+/**
+ * Include "Open Sans" font from Google Webfonts
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700);
+
+
+/**
+ * Include "Genericons" icon font from Automattic
+ */
+
+@import url(fonts/genericons/genericons.css);
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, main, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1.2;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/**
+ * Global Properties
+ */
+
+/* Box Sizing */
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+
+html {
+  font: 81.25% "Open Sans", sans-serif; /* 13px / 16px */
+}
+
+
+/**
+ * Site Header
+ */
+
+header[role="banner"] {
+  background: url(http://lorempixel.com/320/255/nature/2) no-repeat center center;
+  background-size: cover;
+  line-height: 1.2;
+  padding: 2em 21.875%; /* 26px / 13px, 70px / 320px */
+  text-align: center;
+}
+
+header[role="banner"] a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+header[role="banner"] .logo {
+  display: block;
+  margin: 0 auto 2.30769230769231em; /* 30px / 13px */
+}
+
+header[role="banner"] h1,
+header[role="banner"] .subhead {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+}
+
+header[role="banner"] h1 {
+  font-size: 2em; /* 26px / 13px */
+  margin-bottom: 0.34615384615385em; /* 9px / 26px */
+}
+
+header[role="banner"] .subhead {
+  font-size: 1.23076923076923em; /* 16px / 13px */
+}
+
+/**
+ * Primary Navigation
+ */
+
+nav[role="navigation"] a {
+  background-color: #771717;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  display: block;
+  height: 2.46153846153846em; /* 32px / 13px */
+  line-height: 2.46153846153846em; /* Equal to height for vertical centering */
+  padding: 0 3.75%; /* 12px / 320px */
+  text-decoration: none;
+}
+
+nav[role="navigation"] .toggle-menu {
+  background-image: -moz-linear-gradient(top, #951c1c, #771717);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#951c1c), color-stop(100%,#771717));
+  background-image: -webkit-linear-gradient(top, #951c1c, #771717);
+  background-image: -o-linear-gradient(top, #951c1c, #771717);
+  background-image: -ms-linear-gradient(top, #951c1c, #771717);
+  background-image: linear-gradient(to bottom, #951c1c, #771717);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#951c1c', endColorstr='#771717',GradientType=0 );
+}
+
+nav[role="navigation"] .toggle-menu:after {
+  content: "\f431";
+  display: inline-block;
+  font-family: Genericons;
+  font-size: 1.23076923076923em;
+  margin-left: 4px;
+  vertical-align: bottom;
+}
+
+nav[role="navigation"] ul {
+  background-color: #771717;
+  display: none;
+}
+
+nav[role="navigation"] ul a:hover,
+nav[role="navigation"] ul a:active,
+nav[role="navigation"] ul a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav[role="navigation"] ul ul a {
+  padding: 0 7.5%;
+}
+
+nav[role="navigation"] ul ul ul a {
+  padding: 0 11.25%;
+}
+
+
+
+
+
