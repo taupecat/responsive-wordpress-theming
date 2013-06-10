@@ -9,37 +9,50 @@
 
 <body>
 
-  <!-- Begin Site Banner -->
+<!-- Begin Site Banner -->
 
-  <header role="banner">
-    <img src="http://placehold.it/123x123&amp;text=[logo]">
+<header role="banner">
+  <a href="/">
+    <img src="http://placehold.it/123x123&amp;text=[logo]" class="logo">
     <h1>Our Great Site</h1>
     <div class="subhead">Just another responsive WordPress theme.</div>
-  </header>
+  </a>
+</header>
 
-  <!-- End Site Banner -->
+<!-- End Site Banner -->
+
+<!-- Begin Navigation/Search Bar -->
+
+<div class="navbar clearfix">
 
   <!-- Begin Primary Navigation -->
 
-  <nav role="navigation">
-    <ul>
-      <li><a href="#!">Menu Option 1</a></li>
-      <li class="current_page_item"><a href="#!">Menu Option 2</a></li>
-      <li><a href="#!">Menu Option 3</a>
-        <ul class="sub-menu">
-          <li><a href="#!">Sub Option 1</a></li>
-          <li><a href="#!">Sub Option 2</a></li>
-        </ul>
-      </li>
-      <li><a href="#!">Menu Option 4</a></li>
-    </ul>
+  <nav class="primary-navigation" role="navigation">
+    <a href="#!" id="toggle-primary-nav" class="toggle-menu">Menu</a>
+    <a class="screen-reader-text skip-link" href="#content">Skip to content.</a>
+
+    <div class="primary-navigation-container">
+      <ul>
+        <li><a href="#!">Menu Option 1</a></li>
+        <li class="current_page_item"><a href="#!">Menu Option 2</a></li>
+        <li><a href="#!">Menu Option 3</a>
+          <ul class="sub-menu">
+            <li><a href="#!">Sub Option 1</a></li>
+            <li><a href="#!">Sub Option 2</a></li>
+          </ul>
+        </li>
+        <li><a href="#!">Menu Option 4</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- End Primary Navigation -->
 
   <!-- Begin Search Form -->
 
-  <form role="search" method="get" class="searchform" action="http://family.rotton.com/">
+  <a href="#!" class="toggle-search"></a>
+
+  <form role="search" method="get" class="searchform" action="http://prototype.local/">
     <label>
       <span class="screen-reader-text">Search for:</span>
       <input type="search" placeholder="Search &hellip;" value="" name="s" title="Search for:" />
@@ -49,9 +62,13 @@
 
   <!-- End Search Form -->
 
+</div>
+
+<!-- End Navigation/Search Bar -->
+
 <!-- Begin Main Content -->
 
-<main role="main">
+<main id="content" role="main">
 
   <article>
 
