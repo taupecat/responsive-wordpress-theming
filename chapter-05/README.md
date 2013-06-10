@@ -1,7 +1,4 @@
-Chapter-04
+Chapter-05
 =========
 
-Code samples from chapter 4 of my responsive WordPress theme book:
-
-* HTML Prototype of home, archive and single article pages.
-* Narrow-view CSS for home page.
+Code samples from chapter 5 of my responsive WordPress theme book
