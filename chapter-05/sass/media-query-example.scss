@@ -1,0 +1,32 @@
+.main-column, .right-column {
+  border: 1em solid;
+  box-sizing: border-box;
+  float: none; #A
+  min-height: 15em;
+  padding: 1em cp(16px, 960px);
+
+  @media only screen and (min-width: 600px) {
+    float: right;
+    min-height: 25em;
+  }
+}
+.main-column {
+  background-color: #dfbf9c;
+  border-color: #be813d;
+  margin-right: 0;
+  width: 100%;
+
+  @media only screen and (min-width: 600px) {
+    margin-right: cp(25px, 960px);
+    width: cp(630px, 960px);
+  }
+}
+.right-column {
+  background-color: #92b4d1;
+  border-color: #3570a4;
+  width: 100%;
+
+  @media only screen and (min-width: 600px) {
+    width: cp(305px, 960px);
+  }
+}

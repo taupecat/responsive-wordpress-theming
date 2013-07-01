@@ -1,0 +1,139 @@
+.screen-reader-text.skip-link:focus {
+  background-color: $red;
+  clip: auto;
+  color: #FFFFFF;
+  display: block;
+  height: ce(32px, 13px);
+  line-height: ce(32px, 13px); /* Equal to height for vertical centering */
+  padding: 0 cp(12px, 320px);
+  position: static;
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: $red;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk1MWMxYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3NzE3MTciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background-image: -moz-linear-gradient(top, #951c1c 0%, $red 100%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#951c1c), color-stop(100%, $red)); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top, #951c1c 0%, $red 100%); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(top, #951c1c 0%, $red 100%); /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(top, #951c1c 0%, $red 100%); /* IE10+ */
+  background-image: linear-gradient(to bottom,  #951c1c 0%, $red 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#951c1c', endColorstr='$red',GradientType=0 ); /* IE6-8 */
+}
+
+nav[role="navigation"] {
+
+  a {
+    color: #FFFFFF;
+    display: block;
+    height: ce(32px, 13px);
+    line-height: ce(32px, 13px); /* Equal to height for vertical centering */
+    padding: 0 cp(12px, 320px);
+    text-decoration: none;
+  }  
+
+  .toggle-menu {
+    font-size: ce(18px, 13px);
+    height: ce(32px, 18px);
+    line-height: ce(32px, 18px);
+
+    &:after {
+      content: "\f431";
+      display: inline-block;
+      font-family: Genericons;
+      font-size: 1.23076923076923em;
+      margin-left: 4px;
+      vertical-align: bottom;
+    }
+  }
+
+  ul {
+    background-color: $red;
+    display: none;
+  }
+
+  li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  ul a:hover,
+  ul a:active,
+  ul a:focus,
+  li.current_page_item a {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  ul ul a {
+    padding: 0 7.5%;
+  }
+
+  ul ul ul a {
+    padding: 0 11.25%;
+  }
+}
+
+.toggle-search {
+  color: #FFFFFF;
+  display: block;
+  font-family: Genericons;
+  font-size: ce(18px, 13px);
+  height: ce(32px, 18px);
+  line-height: ce(32px, 18px);
+  overflow: hidden;
+  position: absolute;
+  right: 3.75%;
+  text-decoration: none;
+  top: 0;
+  white-space: nowrap;
+}
+
+form[role="search"] {
+  background-color: $red;
+  display: none;
+  padding: 0 3.75% 0.25em 0;
+  position: absolute;
+  text-align: right;
+  top: 100%;
+  width: 100%;
+
+  label {
+    display: inline-block;
+  }
+
+  input {
+    border: none;
+    box-shadow: 2px 2px 10px -2px rgba(0, 0, 0, 0.4) inset;
+    display: inline-block;
+    float: right;
+
+    &[type="search"] {
+      border-radius: 100em;
+      margin-right: 1em;
+      padding: 4px 8px;
+    }
+
+    &[type="submit"] {
+      background-color: #dfdfdf;
+      border: 1px solid #d0d0d0;
+      border-radius: 100em;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -2px 3px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      padding: 2px 8px;
+
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+
+      &:hover, &:active, &:focus {
+        background-color: #d0d0d0;
+      }
+    }
+  }
+}

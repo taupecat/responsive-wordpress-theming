@@ -1,0 +1,32 @@
+.widget {
+  padding: 1em 3.75%;
+}
+
+
+/**
+ * Primary and Secondary Sidebars
+ */
+
+.sidebar .widget {
+  background-color: #e9e2dd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1px;
+
+  h1 {
+    color: #514530;
+    font-size: ce(16px, 13px);
+    font-weight: bold;
+  }
+}
+
+
+
+/**
+ * Footer Widget Areas
+ */
+
+footer[role="contentinfo"] {
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  margin-bottom: ce(20px, 13px);
+}
