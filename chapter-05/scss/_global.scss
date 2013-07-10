@@ -9,7 +9,7 @@
 /* Fonts */
 
 html {
-  font: cp(13px, 16px) $open-sans;
+  font: 81.25% "Open Sans", sans-serif; /* 13px / 16px */
 }
 
 /* Body */
@@ -39,4 +39,14 @@ body {
 
 .clearfix {
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/* Links */
+
+a {
+  color: $red;
+
+  &:hover, &:active, &:focus {
+    color: #5C1111;
+  }
 }
