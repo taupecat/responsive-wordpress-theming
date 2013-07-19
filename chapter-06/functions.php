@@ -52,40 +52,17 @@ function _s_setup() {
 	 * Enable support for Post Formats
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+
+	/**
+	 * Setup the WordPress core custom background feature.
+	 */
+	add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
+		'default-color' => 'ffffff',
+		'default-image' => '',
+	) ) );
 }
 endif; // _s_setup
 add_action( 'after_setup_theme', '_s_setup' );
-
-/**
- * Setup the WordPress core custom background feature.
- *
- * Use add_theme_support to register support for WordPress 3.4+
- * as well as provide backward compatibility for WordPress 3.3
- * using feature detection of wp_get_theme() which was introduced
- * in WordPress 3.4.
- *
- * @todo Remove the 3.3 support when WordPress 3.6 is released.
- *
- * Hooks into the after_setup_theme action.
- */
-function _s_register_custom_background() {
-	$args = array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	);
-
-	$args = apply_filters( '_s_custom_background_args', $args );
-
-	if ( function_exists( 'wp_get_theme' ) ) {
-		add_theme_support( 'custom-background', $args );
-	} else {
-		define( 'BACKGROUND_COLOR', $args['default-color'] );
-		if ( ! empty( $args['default-image'] ) )
-			define( 'BACKGROUND_IMAGE', $args['default-image'] );
-		add_custom_background();
-	}
-}
-add_action( 'after_setup_theme', '_s_register_custom_background' );
 
 /**
  * Register widgetized area and update sidebar with default widgets
@@ -125,29 +102,29 @@ add_action( 'wp_enqueue_scripts', '_s_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require( get_template_directory() . '/inc/custom-header.php' );
+//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
  */
-require( get_template_directory() . '/inc/template-tags.php' );
+require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require( get_template_directory() . '/inc/extras.php' );
+require get_template_directory() . '/inc/extras.php';
 
 /**
  * Customizer additions.
  */
-require( get_template_directory() . '/inc/customizer.php' );
+require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-require( get_template_directory() . '/inc/jetpack.php' );
+require get_template_directory() . '/inc/jetpack.php';
 
 /**
  * WordPress.com-specific functions and definitions.
  */
-//require( get_template_directory() . '/inc/wpcom.php' );
+//require get_template_directory() . '/inc/wpcom.php';
