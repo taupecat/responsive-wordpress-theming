@@ -1,0 +1,117 @@
+main {
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1px;
+  padding: 1.38461538461538em 3.75%;
+
+  @media only all and (min-width: $bp-medium) {
+    float: right;
+    margin-bottom: ce(10px, 13px);
+    width: cp(420px, 640px);
+  }
+
+  h1 {
+    font-size: 1.38461538461538em; /* 18px / 13px */
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin: 0.5em 0;
+  }
+}
+
+
+/**
+ * Archive Page Styling
+ */
+
+.archive-title {
+  font-size: 1.53846153846154em; /* 20px / 13px */
+  font-weight: 600;
+  margin-bottom: 2.6em; /* 52px / 20px */
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+}
+
+.post {
+  margin-bottom: 4em;
+
+  /* Featured Image */
+  .attachment-post-thumbnail {
+    display: block;
+    margin: 1em auto 0.5em;
+  }
+
+  .entry-title {
+    margin: 0.5em 0;
+  }
+
+  .content-meta {
+    font-size: 0.92307692307692em; /* 12px / 13px */
+    font-weight: 700;
+    margin: 0.5em 0;
+  }
+}
+
+
+/**
+ * Archive Next/Previous Navigation
+ */
+
+%nav-next-previous-a-psuedo-elements {
+  background-color: $taupe;
+  border-radius: 100em;
+  color: #FFFFFF;
+  display: block;
+  font-family: genericons;
+  font-size: 2em; /* 36px / 18px */
+  font-style: normal;
+  height: 1.11111111111111em; /* 40px / 36px */
+  line-height: 1.11111111111111em; /* 40px / 36px */
+  text-align: center;
+  width: 1.11111111111111em; /* 40px / 36px */
+}
+
+.nav-next-previous {
+  @extend .clearfix;
+
+  a {
+    color: $taupe;
+    display: block;
+    font-size: 1.38461538461538em; /* 18px / 13px */
+    font-style: italic;
+    line-height: 2.22222222222222em; /* 40px / 18px */
+
+    &.nav-previous {
+      float: right;
+
+      &:after {
+        @extend %nav-next-previous-a-psuedo-elements;
+        content: '\f429';
+        float: right;
+        margin-left: 10px;
+      }
+    }
+
+    &.nav-next {
+      float: left;
+
+      &:before {
+        @extend %nav-next-previous-a-psuedo-elements;
+
+        content: '\f430';
+        float: left;
+        margin-right: 10px;
+      }
+    }
+
+    &:hover, &:active, &:focus {
+      color: $red;
+
+      &:before, &:after {
+        background-color: $red;
+      }
+    }
+  }
+}
