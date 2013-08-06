@@ -1,0 +1,51 @@
+/*
+Theme Name: Twenty Thirteen Child
+Description: A child theme of Twenty Thirteen
+Author: Tracy F. Rotton
+Author URI: http://www.taupecat.com/
+
+Template: twentythirteen
+*/
+
+@import "../twentythirteen/style.css";
+
+a {
+	color: #ca3c08;
+}
+
+a:visited {
+	color: #1e854a;
+}
+
+a:active,
+a:hover {
+	color: #27ae60;
+}
+
+.navbar {
+	background-color: #ecf0f1;
+}
+
+.entry-title a:hover {
+	color: #27ae60;
+}
+
+.entry-meta a {
+	color: #1e854a;
+}
+
+.entry-meta a:hover {
+	color: #27ae60;
+}
+
+.site-footer {
+	background-color: #ecf0f1;
+}
+
+.site-footer .sidebar-container {
+	background-color: #34495e;
+}
+
+.site-footer .widget a {
+	color: #ecf0f1;
+}
