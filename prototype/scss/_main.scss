@@ -1,0 +1,131 @@
+main {
+	background-color: #FFFFFF;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+	margin-bottom: 1px;
+	padding: 1.38461538461538em 3.75%;
+
+	@include bp(medium) {
+		float: right;
+		margin-bottom: ce(10px, 13px);
+		padding: ce(10px, 13px) cp(10px, 640px);
+		width: cp(420px, 640px);
+	}
+
+	@include bp(large) {
+		float: left;
+		// width: cp(584px, 1024px);
+		width: cp(628px, 1024px);
+	}
+
+	h1 {
+		font-size: ce(18px, 13px);
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
+	p {
+		margin: 0.5em 0;
+	}
+}
+
+
+/**
+ * Archive Page Styling
+ */
+
+.page-title {
+	font-size: ce(20px, 13px);
+	font-weight: 600;
+	margin: ce(20px, 20px) 0 ce(32px, 20px);
+	margin: cr(20px) 0 cr(32px);
+	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+	text-transform: uppercase;
+}
+
+.post {
+	margin-bottom: 4em;
+
+	/* Featured Image */
+	.attachment-post-thumbnail {
+		display: block;
+		margin: 1em auto 0.5em;
+	}
+
+	.entry-title {
+		margin: 1em 0;
+	}
+
+	.entry-meta {
+		font-size: ce(12px, 13px);
+		font-weight: 700;
+		line-height: 1.5;
+		margin: 0.5em 0;
+	}
+}
+
+
+/**
+ * Archive Next/Previous Navigation
+ */
+
+%paging-navigation-pseudo-elements {
+	background-color: $taupe;
+	border-radius: 100em;
+	color: #FFFFFF;
+	display: block;
+	font-family: genericons;
+	font-size: 2em; /* 36px / 18px */
+	font-style: normal;
+	height: 1.11111111111111em; /* 40px / 36px */
+	left: 50%;
+	line-height: 1.11111111111111em; /* 40px / 36px */
+	margin-left: ce(-20px, 36px);
+	position: absolute;
+	text-align: center;
+	top: -100%;
+	width: 1.11111111111111em; /* 40px / 36px */
+
+	@include transition(background-color 0.2s linear);
+}
+
+.paging-navigation {
+	@extend %clearfix !optional;
+	margin-top: 5em;
+
+	a {
+		color: $taupe;
+		display: block;
+		font-size: 1.38461538461538em; /* 18px / 13px */
+		font-style: italic;
+		line-height: 2;
+		position: relative;
+
+		@include transition(color 0.2s linear);
+
+		&:hover, &:active, &:focus {
+			color: $red;
+
+			&:before, &:after {
+				background-color: $red;
+			}
+		}
+	}
+
+	.nav-previous a {
+		float: right;
+
+		&:after {
+			@extend %paging-navigation-pseudo-elements;
+			content: '\f429';
+		}
+	}
+
+	.nav-next a {
+		float: left;
+
+		&:before {
+			@extend %paging-navigation-pseudo-elements;
+			content: '\f430';
+		}
+	}
+}
