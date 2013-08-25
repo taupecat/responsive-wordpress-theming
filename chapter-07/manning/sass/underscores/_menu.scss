@@ -3,49 +3,64 @@
 	display: block;
 	float: left;
 	width: 100%;
-}
-.main-navigation ul {
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-.main-navigation li {
-	float: left;
-	position: relative;
-}
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	display: none;
-	float: left;
-	position: absolute;
-		top: 1.5em;
-		left: 0;
-	z-index: 99999;
-}
-.main-navigation ul ul ul {
-	left: 100%;
-	top: 0;
-}
-.main-navigation ul ul a {
-	width: 200px;
-}
-.main-navigation ul ul li {
-}
-.main-navigation li:hover > a {
-}
-.main-navigation ul ul :hover > a {
-}
-.main-navigation ul ul a:hover {
-}
-.main-navigation ul li:hover > ul {
-	display: block;
-}
-.main-navigation li.current_page_item a,
-.main-navigation li.current-menu-item a {
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+	}
+
+	li {
+		float: left;
+		position: relative;
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	ul ul {
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+		display: none;
+		float: left;
+		position: absolute;
+			top: 1.5em;
+			left: 0;
+		z-index: 99999;
+
+		ul {
+			left: 100%;
+			top: 0;
+		}
+
+		a {
+			width: 200px;
+		}
+
+		li {
+		}
+
+		a {
+		}
+
+		li:hover > a {
+		}
+
+		:hover > a {
+		}
+
+		a:hover {
+		}
+	}
+
+	ul li:hover > ul {
+		display: block;
+	}
+
+	li.current_page_item a,
+	li.current-menu-item a {
+	}
 }
 
 /* Small menu */
