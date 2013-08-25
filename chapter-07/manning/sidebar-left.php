@@ -1,13 +1,20 @@
 <?php
 /**
- * The Sidebar containing the main widget areas.
+ * The Sidebar containing the primary and secondary widget areas in their
+ * default place in the DOM structure.
  *
  * @package Manning
  */
 ?>
-  <div id="secondary" class="widget-area" role="complementary">
-    <?php do_action( 'before_sidebar' ); ?>
-    <?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+  <!-- Begin Left Sidebar -->
+
+  <div id="sidebar-left" class="sidebar-left">
+
+    <!-- Begin Primary Sidebar -->
+
+    <div id="sidebar-primary" class="widget-area sidebar sidebar-primary" role="complementary">
+      <?php do_action( 'before_sidebar' ); ?>
+      <?php if ( ! dynamic_sidebar( 'sidebar-primary' ) ) : ?>
 
       <aside id="search" class="widget widget_search">
         <?php get_search_form(); ?>
@@ -29,5 +36,25 @@
         </ul>
       </aside>
 
-    <?php endif; // end sidebar widget area ?>
-  </div><!-- #secondary -->
+      <?php endif; // end sidebar widget area ?>
+    </div>
+    <!-- // #sidebar-primary -->
+
+    <!-- End Primary Sidebar -->
+
+    <!-- Begin Secondary Sidebar -->
+
+    <div id="sidebar-secondary" class="widget-area sidebar sidebar-secondary" role="complementary">
+      <?php do_action( 'before_sidebar' ); ?>
+
+      <?php dynamic_sidebar( 'sidebar-secondary' ); ?>
+
+    </div>
+    <!-- #sidebar-secondary -->
+
+    <!-- End Secondary Sidebar -->
+
+  </div>
+  <!-- #sidebar-left -->
+
+  <!-- End Left Sidebar -->
