@@ -677,19 +677,19 @@ a:active {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000325}}
-.site-content .gallery {
+.site-main .gallery {
   margin-bottom: 1.5em;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000330}}
-.site-content .gallery a img {
+.site-main .gallery a img {
   border: none;
   height: auto;
   max-width: 90%;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000335}}
-.site-content .gallery dd {
+.site-main .gallery dd {
   margin: 0;
 }
 
@@ -704,7 +704,7 @@ object {
 /* =Navigation
 ----------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_navigation\.scss}line{font-family:\000031}}
-.site-content [class*="navigation"] {
+.site-main [class*="navigation"] {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
