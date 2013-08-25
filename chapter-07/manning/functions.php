@@ -69,8 +69,28 @@ add_action( 'after_setup_theme', 'manning_setup' );
  */
 function manning_widgets_init() {
   register_sidebar( array(
-    'name'          => __( 'Sidebar', 'manning' ),
-    'id'            => 'sidebar-1',
+    'name'          => __( 'Primary Sidebar', 'manning' ),
+    'id'            => 'sidebar-primary',
+    'description'   => __( 'The primary sidebar used across the site.', 'manning' ),
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</aside>',
+    'before_title'  => '<h1 class="widget-title">',
+    'after_title'   => '</h1>',
+  ) );
+  register_sidebar( array(
+    'name'          => __( 'Secondary Sidebar', 'manning' ),
+    'id'            => 'sidebar-secondary',
+    'description'   => __( 'A secondary sidebar that appears only on the front page.', 'manning' ),
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</aside>',
+    'before_title'  => '<h1 class="widget-title">',
+    'after_title'   => '</h1>',
+  ) );
+
+  // Register our 4 footer widget areas with one function
+  register_sidebars( 4, array(
+    'name'          => __( 'Footer Widget Area %d' ),
+    'id'            => "footer-widget-area",
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget'  => '</aside>',
     'before_title'  => '<h1 class="widget-title">',
