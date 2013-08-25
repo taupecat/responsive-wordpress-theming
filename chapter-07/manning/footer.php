@@ -11,14 +11,24 @@
   </div><!-- #content -->
 
   <footer id="colophon" class="site-footer" role="contentinfo">
-    <div class="site-info">
-      <?php do_action( 'manning_credits' ); ?>
-      <a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'manning' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'manning' ), 'WordPress' ); ?></a>
-      <span class="sep"> | </span>
-      <?php printf( __( 'Theme: %1$s by %2$s.', 'manning' ), 'manning', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
-    </div><!-- .site-info -->
-  </footer><!-- #colophon -->
-</div><!-- #page -->
+
+    <?php for ( $i = 1; $i < 5; $i++ ): ?>
+
+      <!-- Begin Footer Widget Area <?php echo $i; ?> -->
+
+      <section id="footer-widget-area-<?php echo $i; ?>" class="footer-widget-area footer-widget-area-<?php echo $i; ?>">
+        <?php dynamic_sidebar( 'footer-widget-area-' . $i ); ?>
+      </section>
+
+      <!-- End Footer Widget Area <?php echo $i; ?> -->
+
+    <?php endfor; ?>
+
+  </footer>
+  <!-- #colophon -->
+
+</div>
+<!-- #page -->
 
 <?php wp_footer(); ?>
 
