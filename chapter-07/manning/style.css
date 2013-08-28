@@ -69,7 +69,7 @@ and Blueprint http://www.blueprintcss.org/
  * All Genericons
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_genericons\.scss}line{font-family:\0000334}}
-.genericon {
+.genericon, .toggle-search {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -87,7 +87,7 @@ and Blueprint http://www.blueprintcss.org/
  * IE7 and IE6 hacks
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_genericons\.scss}line{font-family:\0000352}}
-.genericon {
+.genericon, .toggle-search {
   *overflow: auto;
   *zoom: 1;
   *display: inline;
@@ -276,7 +276,7 @@ and Blueprint http://www.blueprintcss.org/
 
 /* Other icons */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_genericons\.scss}line{font-family:\00003105}}
-.genericon-search:before {
+.genericon-search:before, .toggle-search:before {
   content: '\f400';
 }
 
@@ -996,9 +996,10 @@ a:hover, a:focus, a:active {
 
 /* Clearing */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_global\.scss}line{font-family:\00003278}}
-.clear:before, header[role="banner"] a[rel="home"]:before,
+.clear:before, header[role="banner"] a[rel="home"]:before, .navbar:before,
 .clear:after,
 header[role="banner"] a[rel="home"]:after,
+.navbar:after,
 [class*="content"]:before,
 [class*="content"]:after,
 [class*="site"]:before,
@@ -1008,7 +1009,7 @@ header[role="banner"] a[rel="home"]:after,
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_global\.scss}line{font-family:\00003285}}
-.clear:after, header[role="banner"] a[rel="home"]:after,
+.clear:after, header[role="banner"] a[rel="home"]:after, .navbar:after,
 [class*="content"]:after,
 [class*="site"]:after {
   clear: both;
@@ -1097,72 +1098,322 @@ header[role="banner"] a[rel="home"] .site-title {
 
 /* =Menu
 ----------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\000031}}
-.main-navigation {
+/**
+ * "Skip Nav" link becomes visible on focus to facilitate
+ * screen reader and keyboard-only users.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\000036}}
+.screen-reader-text.skip-link a:focus {
+  background-color: #771717;
+  clip: auto;
+  color: #FFFFFF;
+  display: block;
+  height: 2.46154em;
+  line-height: 2.46154em;
+  padding: 0 3.75%;
+  position: static;
+  text-decoration: none;
+}
+
+/**
+ * Navbar contains primary navigation and search field
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000323}}
+.navbar {
+  background-color: #771717;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+  /**
+   * Apply gradient to the navigation bar in medium viewports and up
+   * (in narrow viewports, the menu visibility toggle receives the
+   * gradient.)
+   */
+}
+@media only all and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000323}}
+  .navbar {
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #951c1c), color-stop(100%, #771717));
+    background-image: -webkit-linear-gradient(top, #951c1c 0%, #771717 100%);
+    background-image: -moz-linear-gradient(top, #951c1c 0%, #771717 100%);
+    background-image: -o-linear-gradient(top, #951c1c 0%, #771717 100%);
+    background-image: linear-gradient(top, #951c1c 0%, #771717 100%);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000340}}
+.primary-navigation {
   clear: both;
   display: block;
   float: left;
   width: 100%;
+  /**
+   * Menu visibility toggle for narrow viewports
+   */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\000037}}
-.main-navigation ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000313}}
-.main-navigation li {
-  float: left;
-  position: relative;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000318}}
-.main-navigation a {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000346}}
+.primary-navigation a {
+  color: #FFFFFF;
   display: block;
+  height: 2.46154em;
+  line-height: 2.46154em;
+  padding: 0 3.75%;
   text-decoration: none;
+  text-align: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000323}}
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  display: none;
-  float: left;
-  position: absolute;
-  top: 1.5em;
-  left: 0;
-  z-index: 99999;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000360}}
+.primary-navigation .menu-toggle {
+  height: 1.77778em;
+  line-height: 1.77778em;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #951c1c), color-stop(100%, #771717));
+  background-image: -webkit-linear-gradient(top, #951c1c 0%, #771717 100%);
+  background-image: -moz-linear-gradient(top, #951c1c 0%, #771717 100%);
+  background-image: -o-linear-gradient(top, #951c1c 0%, #771717 100%);
+  background-image: linear-gradient(top, #951c1c 0%, #771717 100%);
+  font-size: 18px;
+  font-size: 1.38462rem;
+  /**
+   * Hide the visibility toggle in medium and up viewports
+   */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000332}}
-.main-navigation ul ul ul {
-  left: 100%;
-  top: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000337}}
-.main-navigation ul ul a {
-  width: 200px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000357}}
-.main-navigation ul li:hover > ul {
-  display: block;
-}
-
-/* Small menu */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000367}}
-.menu-toggle {
-  display: none;
-  cursor: pointer;
+.primary-navigation .menu-toggle:after {
+  content: "\f431";
+  display: inline-block;
+  font-family: Genericons;
+  margin-left: 4px;
+  vertical-align: bottom;
 }
-
-@media screen and (max-width: 600px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000374}}
-  .menu-toggle,
-  .main-navigation.toggled .nav-menu {
-    display: block;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000378}}
-  .main-navigation ul {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000375}}
+.primary-navigation .menu-toggle.open:after {
+  content: "\f432";
+}
+@media only all and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000360}}
+  .primary-navigation .menu-toggle {
     display: none;
   }
 }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000389}}
+.primary-navigation-container {
+  /**
+   * Hide the primary navigation by default
+   * in narrow viewports, to be revealed by the
+   * visibility toggle.
+   */
+  display: none;
+  /**
+   * Primary navigation is visible by default
+   * in medium viewports and up.
+   */
+  /**
+   * First Level Navigation
+   */
+}
+@media only all and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\0000389}}
+  .primary-navigation-container {
+    display: block;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #951c1c), color-stop(100%, #771717));
+    background-image: -webkit-linear-gradient(top, #951c1c 0%, #771717 100%);
+    background-image: -moz-linear-gradient(top, #951c1c 0%, #771717 100%);
+    background-image: -o-linear-gradient(top, #951c1c 0%, #771717 100%);
+    background-image: linear-gradient(top, #951c1c 0%, #771717 100%);
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003114}}
+.primary-navigation-container ul {
+  background-color: #771717;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  /**
+   * Second Level Navigation
+   */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003120}}
+.primary-navigation-container ul li {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media only all and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003120}}
+  .primary-navigation-container ul li {
+    border-top: none;
+    float: left;
+    position: relative;
+    white-space: nowrap;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003129}}
+  .primary-navigation-container ul li:hover > ul {
+    display: block;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003133}}
+  .primary-navigation-container ul li a {
+    display: block;
+    padding: 0 1em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003143}}
+.primary-navigation-container ul a:hover,
+.primary-navigation-container ul a:active,
+.primary-navigation-container ul a:focus,
+.primary-navigation-container ul li.current_page_item > a {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003153}}
+.primary-navigation-container ul ul.children a {
+  padding: 0 7.5%;
+}
+@media only all and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003153}}
+  .primary-navigation-container ul ul.children a {
+    padding: 0 1em;
+  }
+}
+@media only all and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003151}}
+  .primary-navigation-container ul ul.children {
+    box-shadow: -2px 0 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    position: absolute;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003166}}
+  .primary-navigation-container ul ul.children li {
+    float: none;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003173}}
+  .primary-navigation-container ul ul.children li a {
+    display: block;
+    min-width: 180px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003179}}
+  .primary-navigation-container ul ul.children ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+}
+@media only all and (min-width: 37.5em) and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003166}}
+  .primary-navigation-container ul ul.children li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003186}}
+.primary-navigation-container ul ul.children ul a {
+  padding: 0 11.25%;
+}
+@media only all and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003186}}
+  .primary-navigation-container ul ul.children ul a {
+    padding: 0 1em;
+  }
+}
+
+/**
+ * End primary site navigation
+ */
+/**
+ * Begin site search
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003206}}
+.toggle-search {
+  color: #FFFFFF;
+  display: block;
+  font-family: Genericons;
+  font-size: 1.38462em;
+  height: 1.77778em;
+  line-height: 1.77778em;
+  overflow: hidden;
+  position: absolute;
+  right: 3.75%;
+  text-decoration: none;
+  top: 0;
+  white-space: nowrap;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003222}}
+.toggle-search:hover, .toggle-search:active, .toggle-search:focus {
+  color: #FFFFFF;
+}
+@media only all and (min-width: 56.25em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003206}}
+  .toggle-search {
+    display: none;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003231}}
+form[role="search"] {
+  background-color: #771717;
+  clear: both;
+  display: none;
+  float: right;
+  padding: 0 3.75% 0.75em 0;
+}
+@media only all and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003231}}
+  form[role="search"] {
+    background-color: transparent;
+  }
+}
+@media only all and (min-width: 56.25em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003231}}
+  form[role="search"] {
+    clear: none;
+    display: block;
+    margin-right: 10px;
+    padding: 0;
+    margin-top: 5px;
+    margin-top: 0.38462rem;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003251}}
+form[role="search"] label {
+  display: block;
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003255}}
+form[role="search"] label .screen-reader-text {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  text-indent: 102%;
+  white-space: nowrap;
+  width: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003265}}
+form[role="search"] input {
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003268}}
+form[role="search"] input[type="search"] {
+  border-radius: 100em;
+  box-shadow: 2px 2px 10px -2px rgba(0, 0, 0, 0.4) inset;
+  margin-right: 1em;
+  padding: 4px 8px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003275}}
+form[role="search"] input[type="submit"] {
+  background-color: #dfdfdf;
+  border: 1px solid #d0d0d0;
+  border-radius: 100em;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -2px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  float: left;
+  padding: 2px 8px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_menu\.scss}line{font-family:\00003287}}
+form[role="search"] input[type="submit"]:hover, form[role="search"] input[type="submit"]:active, form[role="search"] input[type="submit"]:focus {
+  background-color: #d0d0d0;
+}
+
+/**
+ * End Site Search
+ */
 /* =Content
 ----------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_content\.scss}line{font-family:\000033}}
