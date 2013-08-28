@@ -34,7 +34,7 @@
 
       <div class="site-branding">
         <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-        <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+        <div class="site-description"><?php bloginfo( 'description' ); ?></div>
       </div>
       <!-- // .site-branding -->
 
