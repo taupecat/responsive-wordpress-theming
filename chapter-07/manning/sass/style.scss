@@ -63,11 +63,11 @@ $default-font-size: 13px !default;
 
 /* =Reset
 -------------------------------------------------------------- */
-@import "underscores/reset";
+@import "reset";
 
 /* =Global
 ----------------------------------------------- */
-@import "underscores/global";
+@import "global";
 
 /* =Header
 ----------------------------------------------- */
@@ -75,32 +75,32 @@ $default-font-size: 13px !default;
 
 /* =Menu
 ----------------------------------------------- */
-@import "underscores/menu";
+@import "menu";
 
 /* =Content
 ----------------------------------------------- */
-@import "underscores/content";
+@import "content";
 
 /* =Asides
 ----------------------------------------------- */
-@import "underscores/asides";
+@import "asides";
 
 /* =Media
 ----------------------------------------------- */
-@import "underscores/media";
+@import "media";
 
 /* =Navigation
 ----------------------------------------------- */
-@import "underscores/navigation";
+@import "navigation";
 
 /* =Comments
 ----------------------------------------------- */
-@import "underscores/comments";
+@import "comments";
 
 /* =Widgets
 ----------------------------------------------- */
-@import "underscores/widgets";
+@import "widgets";
 
 /* =Infinite Scroll
 ----------------------------------------------- */
-@import "underscores/infinite-scroll";
+@import "infinite-scroll";
