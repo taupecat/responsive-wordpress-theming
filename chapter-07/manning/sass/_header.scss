@@ -1,0 +1,74 @@
+header[role="banner"] a[rel="home"] {
+	@extend .clear;
+
+	background: {
+		// image: url(http://lorempixel.com/320/255/nature/2);
+		position: center center;
+		repeat: no-repeat;
+		size: cover;
+	}
+	color: #FFFFFF;
+	display: block;
+	font-size: ce(16px, 13px);
+	padding: ce(26px, 16px) cp(60px, 320px);
+	text-align: center;
+	text-decoration: none;
+
+	@include bp(medium) {
+		background-image: url(http://lorempixel.com/640/255/nature/2/);
+		font-size: ce(20px, 13px);
+		padding: 0;
+		text-align: left;
+	}
+
+	@include bp(large) {
+		background: {
+			image: url(http://lorempixel.com/1024/255/nature/2/);
+			position: center bottom;
+			size: cover;
+		}
+		font-size: ce(24px, 13px);
+	}
+
+	.logo {
+		box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.4);
+		display: block;
+		margin: 0 auto 1em;
+
+		@include bp(medium) {
+			float: left;
+			margin: ce(25px, 13px) cp(25px, 640px);
+		}
+	}
+
+	@include bp(medium) {
+		.site-branding {
+			float: left;
+		}
+	}
+
+	.site-title, .site-description {
+		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+	}
+
+	.site-title {
+		font-size: ce(26px, 16px);
+		margin-bottom: ce(9px, 26px);
+
+		@include bp(medium) {
+			font-size: ce(30px, 20px);
+			margin-top: ce(44px, 30px);
+		}
+
+		@include bp(large) {
+			font-size: ce(42px, 24px);
+		}
+	}
+
+	.site-description {
+
+		@include bp(medium) {
+			margin-left: 1em;
+		}
+	}
+}

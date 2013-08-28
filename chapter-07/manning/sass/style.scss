@@ -22,9 +22,35 @@ along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normali
 and Blueprint http://www.blueprintcss.org/
 */
 
+
+/**
+ * Our site variables.
+ */
+
+/* Colors */
+
+$red: #771717;
+$gray: #D0D0D0;
+$taupe: #85745F;
+
+/* Default Font Size */
+
+$default-font-size: 13px !default;
+
+
+/**
+ * Compass framework and responsive utilities
+ */
+
+
 /* =Compass
 -------------------------------------------------------------- */
 @import "compass";
+
+/* =Responsive
+-------------------------------------------------------------- */
+@import "responsive";
+
 
 /**
  * Styling from Manning
@@ -38,6 +64,10 @@ and Blueprint http://www.blueprintcss.org/
 /* =Global
 ----------------------------------------------- */
 @import "underscores/global";
+
+/* =Header
+----------------------------------------------- */
+@import "header";
 
 /* =Menu
 ----------------------------------------------- */

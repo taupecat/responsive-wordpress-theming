@@ -21,7 +21,17 @@ Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
 along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 and Blueprint http://www.blueprintcss.org/
 */
+/**
+ * Our site variables.
+ */
+/* Colors */
+/* Default Font Size */
+/**
+ * Compass framework and responsive utilities
+ */
 /* =Compass
+-------------------------------------------------------------- */
+/* =Responsive
 -------------------------------------------------------------- */
 /**
  * Styling from Manning
@@ -50,7 +60,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_reset\.scss}line{font-family:\0000319}}
 html {
-  font-size: 62.5%;
+  font-size: 100%;
   /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
   overflow-y: scroll;
   /* Keeps page centred in all browsers regardless of content height */
@@ -135,18 +145,16 @@ select,
 textarea {
   color: #404040;
   font-family: sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem;
   line-height: 1.5;
 }
 
 /* Headings */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000312}}
 h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000315}}
 hr {
   background-color: #ccc;
   border: 0;
@@ -155,69 +163,69 @@ hr {
 }
 
 /* Text elements */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000323}}
 p {
   margin-bottom: 1.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000326}}
 ul, ol {
   margin: 0 0 1.5em 3em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000329}}
 ul {
   list-style: disc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000332}}
 ol {
   list-style: decimal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000336}}
 li > ul,
 li > ol {
   margin-bottom: 0;
   margin-left: 1.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000340}}
 dt {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000343}}
 dd {
   margin: 0 1.5em 1.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000346}}
 b, strong {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000349}}
 dfn, cite, em, i {
   font-style: italic;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000352}}
 blockquote {
   margin: 0 1.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000355}}
 address {
   margin: 0 0 1.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000358}}
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
-  font-size: 1.5rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
   margin-bottom: 1.6em;
   padding: 1.6em;
@@ -225,24 +233,24 @@ pre {
   max-width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000369}}
 code, kbd, tt, var {
   font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000372}}
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000376}}
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000381}}
 sup,
 sub {
   font-size: 75%;
@@ -252,43 +260,43 @@ sub {
   vertical-align: baseline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000388}}
 sup {
   bottom: 1ex;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000391}}
 sub {
   top: .5ex;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000394}}
 small {
   font-size: 75%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\0000397}}
 big {
   font-size: 125%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003100}}
 figure {
   margin: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003105}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003103}}
 table {
   margin: 0 0 1.5em;
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003107}}
 th {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003110}}
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -296,7 +304,7 @@ img {
   /* Adhere to container width. */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003117}}
 button,
 input,
 select,
@@ -311,14 +319,14 @@ textarea {
   /* Improves appearance and consistency in all browsers */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003124}}
 button,
 input {
   line-height: normal;
   /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003132}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003130}}
 button,
 html input[type="button"],
 input[type="reset"],
@@ -334,13 +342,13 @@ input[type="submit"] {
   -webkit-appearance: button;
   /* Corrects inability to style clickable 'input' types in iOS */
   font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   line-height: 1;
   padding: .6em 1em .4em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003150}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003148}}
 button:hover,
 html input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -349,7 +357,7 @@ input[type="submit"]:hover {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003159}}
 button:focus,
 html input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -362,7 +370,7 @@ input[type="submit"]:active {
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003164}}
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -371,7 +379,7 @@ input[type="radio"] {
   /* Addresses excess padding in IE8/9 */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003170}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003168}}
 input[type="search"] {
   -webkit-appearance: textfield;
   /* Addresses appearance set to searchfield in S5, Chrome */
@@ -381,13 +389,13 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003176}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003174}}
 input[type="search"]::-webkit-search-decoration {
   /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
   -webkit-appearance: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003180}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003178}}
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
@@ -395,7 +403,7 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003189}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003187}}
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -407,7 +415,7 @@ textarea {
   border-radius: 3px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003199}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003197}}
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -417,7 +425,7 @@ textarea:focus {
   color: #111;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003206}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003204}}
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -426,7 +434,7 @@ input[type="search"] {
   padding: 3px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003209}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003207}}
 textarea {
   overflow: auto;
   /* Removes default vertical scrollbar in IE6/7/8/9 */
@@ -437,20 +445,16 @@ textarea {
 }
 
 /* Links */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003217}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003215}}
 a {
   color: royalblue;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003220}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003218}}
 a:visited {
   color: purple;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003225}}
-a:hover,
-a:focus,
-a:active {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003224}}
+a:hover, a:focus, a:active {
   color: midnightblue;
 }
 
@@ -482,11 +486,8 @@ a:active {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003254}}
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003253}}
+.screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -508,8 +509,9 @@ a:active {
 
 /* Clearing */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003279}}
-.clear:before,
+.clear:before, header[role="banner"] a[rel="home"]:before,
 .clear:after,
+header[role="banner"] a[rel="home"]:after,
 [class*="content"]:before,
 [class*="content"]:after,
 [class*="site"]:before,
@@ -519,10 +521,90 @@ a:active {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_global\.scss}line{font-family:\00003286}}
-.clear:after,
+.clear:after, header[role="banner"] a[rel="home"]:after,
 [class*="content"]:after,
 [class*="site"]:after {
   clear: both;
+}
+
+/* =Header
+----------------------------------------------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_header\.scss}line{font-family:\000031}}
+header[role="banner"] a[rel="home"] {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFFFFF;
+  display: block;
+  font-size: 1.23077em;
+  padding: 1.625em 18.75%;
+  text-align: center;
+  text-decoration: none;
+}
+@media only all and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_header\.scss}line{font-family:\000031}}
+  header[role="banner"] a[rel="home"] {
+    background-image: url(http://lorempixel.com/640/255/nature/2/);
+    font-size: 1.53846em;
+    padding: 0;
+    text-align: left;
+  }
+}
+@media only all and (min-width: 56.25em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_header\.scss}line{font-family:\000031}}
+  header[role="banner"] a[rel="home"] {
+    background-image: url(http://lorempixel.com/1024/255/nature/2/);
+    background-position: center bottom;
+    background-size: cover;
+    font-size: 1.84615em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_header\.scss}line{font-family:\0000333}}
+header[role="banner"] a[rel="home"] .logo {
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.4);
+  display: block;
+  margin: 0 auto 1em;
+}
+@media only all and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_header\.scss}line{font-family:\0000333}}
+  header[role="banner"] a[rel="home"] .logo {
+    float: left;
+    margin: 1.92308em 3.90625%;
+  }
+}
+@media only all and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_header\.scss}line{font-family:\0000345}}
+  header[role="banner"] a[rel="home"] .site-branding {
+    float: left;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_header\.scss}line{font-family:\0000350}}
+header[role="banner"] a[rel="home"] .site-title, header[role="banner"] a[rel="home"] .site-description {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_header\.scss}line{font-family:\0000354}}
+header[role="banner"] a[rel="home"] .site-title {
+  font-size: 1.625em;
+  margin-bottom: 0.34615em;
+}
+@media only all and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_header\.scss}line{font-family:\0000354}}
+  header[role="banner"] a[rel="home"] .site-title {
+    font-size: 1.5em;
+    margin-top: 1.46667em;
+  }
+}
+@media only all and (min-width: 56.25em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_header\.scss}line{font-family:\0000354}}
+  header[role="banner"] a[rel="home"] .site-title {
+    font-size: 1.75em;
+  }
+}
+@media only all and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_header\.scss}line{font-family:\0000368}}
+  header[role="banner"] a[rel="home"] .site-description {
+    margin-left: 1em;
+  }
 }
 
 /* =Menu
@@ -534,27 +616,23 @@ a:active {
   float: left;
   width: 100%;
 }
-
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\000037}}
 .main-navigation ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000313}}
 .main-navigation li {
   float: left;
   position: relative;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000318}}
 .main-navigation a {
   display: block;
   text-decoration: none;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000323}}
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   display: none;
@@ -564,38 +642,35 @@ a:active {
   left: 0;
   z-index: 99999;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000332}}
 .main-navigation ul ul ul {
   left: 100%;
   top: 0;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000337}}
 .main-navigation ul ul a {
   width: 200px;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000357}}
 .main-navigation ul li:hover > ul {
   display: block;
 }
 
 /* Small menu */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000367}}
 .menu-toggle {
   display: none;
   cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000374}}
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_menu\.scss}line{font-family:\0000378}}
   .main-navigation ul {
     display: none;
   }
@@ -658,7 +733,6 @@ a:active {
   margin-bottom: 1.5em;
   max-width: 100%;
 }
-
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000314}}
 .wp-caption img[class*="wp-image-"] {
   display: block;
@@ -666,35 +740,32 @@ a:active {
   max-width: 98%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000320}}
 .wp-caption-text {
   text-align: center;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000322}}
-.wp-caption .wp-caption-text {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000323}}
+.wp-caption-text .wp-caption-text {
   margin: 0.8075em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000327}}
 .site-main .gallery {
   margin-bottom: 1.5em;
 }
-
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000330}}
 .site-main .gallery a img {
   border: none;
   height: auto;
   max-width: 90%;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000336}}
 .site-main .gallery dd {
   margin: 0;
 }
 
 /* Make sure embeds and iframes fit their containers */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_media\.scss}line{font-family:\0000350}}
 embed,
 iframe,
 object {
@@ -708,15 +779,13 @@ object {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
-
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_navigation\.scss}line{font-family:\000035}}
-[class*="navigation"] .nav-previous {
+.site-main [class*="navigation"] .nav-previous {
   float: left;
   width: 50%;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_navigation\.scss}line{font-family:\000039}}
-[class*="navigation"] .nav-next {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_navigation\.scss}line{font-family:\0000310}}
+.site-main [class*="navigation"] .nav-next {
   float: right;
   text-align: right;
   width: 50%;
@@ -734,10 +803,9 @@ object {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_widgets\.scss}line{font-family:\000031}}
 .widget {
   margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets */
 }
-
-/* Make sure select elements fit in widgets */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_widgets\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/underscores\/_widgets\.scss}line{font-family:\000035}}
 .widget select {
   max-width: 100%;
 }
