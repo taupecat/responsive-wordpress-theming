@@ -39,7 +39,7 @@ $default-font-size: 13px !default;
 
 
 /**
- * Compass framework and responsive utilities
+ * Compass framework other utility partials
  */
 
 
@@ -50,6 +50,10 @@ $default-font-size: 13px !default;
 /* =Responsive
 -------------------------------------------------------------- */
 @import "responsive";
+
+/* =Fonts
+-------------------------------------------------------------- */
+@import "fonts";
 
 
 /**
