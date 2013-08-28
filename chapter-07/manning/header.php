@@ -47,9 +47,16 @@
 
       <div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'manning' ); ?>"><?php _e( 'Skip to content', 'manning' ); ?></a></div>
 
-      <nav id="site-navigation" class="main-navigation" role="navigation">
+      <nav id="site-navigation" class="primary-navigation" role="navigation">
+
         <a href="#!" id="toggle-primary-nav" class="menu-toggle"><?php _e( 'Menu', 'manning' ); ?></a>
-        <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+
+        <?php wp_nav_menu( array( 
+          'theme_location'  => 'primary',
+          'container_class' => 'primary-navigation-container menu',
+          'container_id'    => 'primary-navigation-container',
+        ) ); ?>
+
       </nav>
       <!-- #site-navigation -->
 
