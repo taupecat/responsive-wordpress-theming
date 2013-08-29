@@ -17,24 +17,8 @@
  */
 
 /**
- * Primary and Secondary Sidebars
+ * Sidebars
  */
-
-.sidebar-primary, .sidebar-secondary {
-
-	@include bp(medium) {
-		// clear: left;
-		// float: left;
-		// margin: 0 cp(10px, 640px) ce(10px, $default-font-size) 0;
-		// width: cp(240px, 640px)
-	}
-
-	@include bp(large) {
-		// clear: none;
-		// margin-right: cp(10px, 1024px);
-		// width: cp(237px, 1024px);
-	}
-}
 
 .sidebar .widget {
 	background-color: #e9e2dd;
