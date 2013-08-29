@@ -18,17 +18,17 @@ get_header(); ?>
 				<h1 class="page-title">
 					<?php
 						if ( is_category() ) :
-							single_cat_title();
+							printf( __( 'Archives for "%s"', 'manning' ), single_cat_title( '', false ) );
 
 						elseif ( is_tag() ) :
-							single_tag_title();
+							printf( __( 'Archives for "%s"', 'manning' ), single_tag_title( '', false ) );
 
 						elseif ( is_author() ) :
 							/* Queue the first post, that way we know
 							 * what author we're dealing with (if that is the case).
 							*/
 							the_post();
-							printf( __( 'Author: %s', 'manning' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Posts by %s', 'manning' ), '<span class="vcard">' . get_the_author() . '</span>' );
 							/* Since we called the_post() above, we need to
 							 * rewind the loop back to the beginning that way
 							 * we can run the loop properly, in full.
@@ -36,13 +36,13 @@ get_header(); ?>
 							rewind_posts();
 
 						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'manning' ), '<span>' . get_the_date() . '</span>' );
+							printf( __( 'Archives for %s', 'manning' ), get_the_date() );
 
 						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'manning' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+							printf( __( 'Archives for %s', 'manning' ), get_the_date( 'F Y' ) );
 
 						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'manning' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+							printf( __( 'Archives for %s', 'manning' ), get_the_date( 'Y' ) );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
 							_e( 'Asides', 'manning' );
@@ -98,5 +98,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php get_sidebar('left'); ?>
 <?php get_footer(); ?>
