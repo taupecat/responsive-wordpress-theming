@@ -8,31 +8,15 @@
 
 
 /**
- * Primary and Secondary Sidebars
+ * Sidebars
  */
-
-.sidebar-primary, .sidebar-secondary {
-
-	@include bp(medium) {
-		clear: left;
-		float: left;
-		margin: 0 cp(10px, 640px) ce(10px, $default-font-size) 0;
-		width: cp(210px, 640px)
-	}
-
-	@include bp(large) {
-		clear: none;
-		margin-right: cp(10px, 1024px);
-		width: cp(210px, 1024px);
-	}
-}
 
 .sidebar .widget {
 	background-color: #e9e2dd;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 	margin-bottom: 1px;
 
-	h1 {
+	.widget-title {
 		color: #514530;
 		font-size: ce(16px, 13px);
 		font-weight: bold;
@@ -84,33 +68,5 @@ footer[role="contentinfo"] {
 				margin-right: 0;
 			}
 		}
-	}
-}
-
-
-/**
- * Home page
- * (where the two sidebars are grouped together for narrow &
- * medium views)
- */
-
-.sidebars {
-
-	@media only all and (min-width: $bp-medium) {
-		float: left;
-		margin: 0 cp(10px, 640px) ce(10px, 13px) 0;
-		width: cp(210px, 640px);
-	}
-}
-
-@media only all and (min-width: $bp-large) {
-	.sidebar-primary {
-		margin: 0 0 ce(10px, 13px) cp(10px, 1024px);
-		width: cp(386px, 1024px);
-	}
-
-	.sidebar-secondary {
-		float: left;
-		width: cp(210px, 1024px);
 	}
 }
