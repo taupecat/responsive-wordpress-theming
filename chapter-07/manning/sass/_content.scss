@@ -75,3 +75,16 @@ main {
 	font-weight: bold;
 	margin-bottom: 1em;
 }
+
+
+/**
+ * Archive Page Styling
+ */
+.page-title {
+	font-size: ce(20px, 13px);
+	font-weight: 600;
+	margin: ce(20px, 20px) 0 ce(32px, 20px);
+	margin: cr(20px) 0 cr(32px);
+	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+	text-transform: uppercase;
+}
