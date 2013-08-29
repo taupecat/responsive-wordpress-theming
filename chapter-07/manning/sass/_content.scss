@@ -11,12 +11,67 @@
 .group-blog .byline {
 	display: inline;
 }
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+
+/**
+ * Define a maximum width for the content area
+ */
+.site-content {
+	margin: 0 auto;
+	max-width: 1024px;
+}
+
+
+/**
+ * Set the width of the content area, variable on
+ * the viewport width and
+ * whether or not it is on the front/home page
+ */
+.content-area {
+	@include bp(medium) {
+		float: right;
+		width: cp(390px, 640px);
+	}
+
+	@include bp(large) {
+		width: cp(628px, 1024px);
+
+		body.home & {
+			width: cp(530px, 1024px);
+		}
+	}
+}
+
+
+/**
+ * <main> element
+ */
+main {
+	background-color: #FFFFFF;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+	margin-bottom: 1px;
+	padding: ce(18px, 13px) cp(12px, 320px);
+
+	@include bp(medium) {
+		margin-bottom: ce(10px, 13px);
+		padding: ce(10px, 13px) cp(10px, 390px);
+	}
+
+	@include bp(large) {
+		padding: ce(10px, 13px) cp(10px, 628px);
+
+		body.home & {
+			padding: ce(10px, 13px) cp(10px, 530px);
+		}
+	}
+}
+
+.entry-title {
+	font-size: ce(18px, 13px);
+	font-weight: bold;
+	margin-bottom: 1em;
 }
