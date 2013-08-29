@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700);
 /*!
 Theme Name: Manning
 Theme URI: http://underscores.me
@@ -1023,7 +1022,6 @@ a:hover, a:focus, a:active {
 ----------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_header\.scss}line{font-family:\000031}}
 header[role="banner"] a[rel="home"] {
-  background-image: url(http://lorempixel.com/320/255/nature/2);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1037,7 +1035,6 @@ header[role="banner"] a[rel="home"] {
 @media only all and (min-width: 37.5em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_header\.scss}line{font-family:\000031}}
   header[role="banner"] a[rel="home"] {
-    background-image: url(http://lorempixel.com/640/255/nature/2/);
     font-size: 1.53846em;
     padding: 0;
     text-align: left;
@@ -1046,7 +1043,6 @@ header[role="banner"] a[rel="home"] {
 @media only all and (min-width: 56.25em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_header\.scss}line{font-family:\000031}}
   header[role="banner"] a[rel="home"] {
-    background-image: url(http://lorempixel.com/1024/255/nature/2/);
     background-position: center bottom;
     background-size: cover;
     font-size: 1.84615em;
@@ -1507,6 +1503,19 @@ main {
   font-size: 1.38462em;
   font-weight: bold;
   margin-bottom: 1em;
+}
+
+/**
+ * Archive Page Styling
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/chapter-07\/manning\/sass\/_content\.scss}line{font-family:\0000383}}
+.page-title {
+  font-size: 1.53846em;
+  font-weight: 600;
+  margin: 1em 0 1.6em;
+  margin: 1.53846rem 0 2.46154rem;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
 }
 
 /* =Asides
