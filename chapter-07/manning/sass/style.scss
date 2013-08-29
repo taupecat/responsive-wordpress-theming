@@ -97,8 +97,9 @@ $default-font-size: 13px !default;
 ----------------------------------------------- */
 @import "comments";
 
-/* =Widgets
+/* =Sidebars & Widgets
 ----------------------------------------------- */
+@import "sidebars";
 @import "widgets";
 
 /* =Infinite Scroll
