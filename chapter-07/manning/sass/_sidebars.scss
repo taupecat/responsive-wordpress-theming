@@ -10,7 +10,13 @@
 	}
 }
 
+.sidebar-right .sidebar-secondary {
+	display: none;
 
+	@include bp(large) {
+		display: block;
+	}
+}
 
 
 /**
