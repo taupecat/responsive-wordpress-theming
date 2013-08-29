@@ -42,6 +42,10 @@
 
     <!-- End Primary Sidebar -->
 
+
+
+    <?php if ( is_home() || is_front_page() ): ?>
+
     <!-- Begin Secondary Sidebar -->
 
     <div id="sidebar-secondary" class="widget-area sidebar sidebar-secondary" role="complementary">
@@ -53,6 +57,10 @@
     <!-- #sidebar-secondary -->
 
     <!-- End Secondary Sidebar -->
+
+    <?php endif; ?>
+
+
 
   </div>
   <!-- #sidebar-left -->
