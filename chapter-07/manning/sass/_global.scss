@@ -1,10 +1,18 @@
-body,
+/* Box Sizing */
+
+*, *:before, *:after {
+	@include box-sizing(border-box);
+}
+
+body {
+	background: #877865 url("images/background.jpg");
+}
+
 button,
 input,
 select,
 textarea {
 	font-family: $opensans;
-	line-height: 1.2;
 }
 
 /* Headings */
@@ -20,10 +28,10 @@ hr {
 
 /* Text elements */
 p {
-	margin-bottom: 1.5em;
+	margin: 0.5em 0;
 }
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 1em;
 }
 ul {
 	list-style: disc;
@@ -212,16 +220,12 @@ textarea {
 
 /* Links */
 a {
-	color: royalblue;
-
-	&:visited {
-		color: purple;
-	}
+	color: $red;
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: midnightblue;
+		color: #5C1111;
 	}
 }
 
@@ -270,18 +274,16 @@ a {
 }
 
 /* Clearing */
-.clear:before,
-.clear:after,
-[class*="content"]:before,
-[class*="content"]:after,
-[class*="site"]:before,
-[class*="site"]:after {
-	content: '';
-	display: table;
-}
+.clear {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
 
-.clear:after,
-[class*="content"]:after,
-[class*="site"]:after {
-	clear: both;
+	&:after {
+		clear: both;
+	}
+
+	zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
