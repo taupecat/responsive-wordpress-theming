@@ -1,0 +1,54 @@
+/**
+ * FOR DEVELOPMENT ONLY
+ * Control display of right/secondary sidebar through CSS.
+ * Not to be used for production.
+ */
+
+.sidebar-left .sidebar-secondary {
+	@include bp(large) {
+		display: none;
+	}
+}
+
+.sidebar-right .sidebar-secondary {
+	display: none;
+
+	@include bp(large) {
+		display: block;
+	}
+}
+
+
+/**
+ * Right and Left Sidebar Containers
+ */
+
+.sidebar-right {
+	display: none;
+
+	@include bp(large) {
+		body.home & {
+			display: block;
+			float: right;
+			margin-left: cp(10px, 1024px);
+			width: cp(237px, 1024px);
+		}
+	}
+}
+
+.sidebar-left {
+	@include bp(medium) {
+		float: left;
+		margin-right: cp(10px, 640px);
+		width: cp(240px, 640px);
+	}
+
+	@include bp(large) {
+		margin-right: cp(10px, 1024px);
+		width: cp(386px, 1024px);
+
+		body.home & {
+			width: cp(237px, 1024px);
+		}
+	}
+}
