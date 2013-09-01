@@ -64,7 +64,7 @@
  */
 
 .widget {
-	padding: 1em 3.75%;
+	padding: ce(13px, 13px) cp(12px, 320px); 
 
 	.widget-title {
 		font-weight: $os-bold;
@@ -86,7 +86,6 @@
 	.widget-title {
 		color: #514530;
 		font-size: ce(16px, 13px);
-		font-weight: bold;
 	}
 }
 
@@ -133,6 +132,10 @@ footer[role="contentinfo"] {
 
 			&:nth-of-type(3) {
 				clear: none;
+			}
+
+			&:last-of-type {
+				margin-right: 0;
 			}
 		}
 	}

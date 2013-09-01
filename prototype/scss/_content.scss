@@ -20,24 +20,31 @@
 	}
 }
 
+/**
+ * <main> element
+ */
 main {
 	background-color: #FFFFFF;
 	margin-bottom: 1px;
-	padding: 1.38461538461538em 3.75%;
+	padding: ce(18px, 13px) cp(12px, $context-small);
 
 	@include bp(medium) {
 		float: right;
-		padding: ce(10px, 13px) cp(10px, $context-medium);
+		padding: ce(10px, 13px) cp(10px, 393px);
+	}
+
+	@include bp(large) {
+		padding: ce(10px, 13px) cp(10px, 632px);
+
+		body.home & {
+			padding: ce(10px, 13px) cp(10px, 533px);
+		}
 	}
 
 	.entry-title {
 		font-size: ce(18px, 13px);
 		font-weight: bold;
 		margin-bottom: 1em;
-	}
-
-	p {
-		margin: 0.5em 0;
 	}
 }
 
