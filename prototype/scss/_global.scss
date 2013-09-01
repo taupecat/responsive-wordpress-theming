@@ -19,10 +19,11 @@ body {
 
 /* Accessibility */
 
-.screen-reader-text a {
+.screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute;
 }
+
 
 /* Micro Clearfix (from Nicolas Gallagher) */
 
