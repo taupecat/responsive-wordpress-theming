@@ -1,39 +1,102 @@
-.widget {
-	padding: ce(13px, 13px) cp(12px, 320px); 
+/**
+ * FOR DEVELOPMENT ONLY
+ * Control display of right/secondary sidebar through CSS.
+ * Not to be used for production.
+ */
 
-	/* Make sure select elements fit in widgets */
-	select {
-		max-width: 100%;
-	}
+.sidebar-left .sidebar-secondary {
+  @include bp(large) {
+    display: none;
+  }
+}
 
-	.widget-title {
-		font-weight: bold;
-	}
+.sidebar-right .sidebar-secondary {
+  display: none;
+
+  @include bp(large) {
+    display: block;
+  }
 }
 
 
 /**
- * Sidebars
+ * Right and Left Sidebar Containers
  */
 
+.sidebar-right {
+  display: none;
+
+  @include bp(large) {
+    body.home & {
+      display: block;
+      float: right;
+      margin-left: 3px;
+      width: cp(242px, $context-large);
+    }
+  }
+}
+
+.sidebar-left {
+  @include bp(medium) {
+    float: left;
+    width: cp(245px, $context-medium);
+  }
+
+  @include bp(large) {
+    width: cp(390px, $context-large);
+
+    body.home & {
+      width: cp(242px, $context-large);
+    }
+  }
+}
+
+.sidebar-primary,
+.sidebar-secondary {
+  background-color: #E9E2DD;
+  margin-bottom: 1px;
+}
+
+
 /**
- * Sidebars
+ * Styling common to all widgets, whether
+ * in the sidebars or the footer
+ */
+
+.widget {
+  padding: ce(13px, 13px) cp(12px, 320px); 
+
+  /* Make sure select elements fit in widgets */
+  select {
+    max-width: 100%;
+  }
+
+  .widget-title {
+    font-weight: $os-bold;
+  }
+}
+
+
+/**
+ * Sidebar Widgets
  */
 
 .sidebar .widget {
-	background-color: #e9e2dd;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-	margin-bottom: 1px;
+  border-bottom: 1px solid darken(#E9E2DD, 60%);
 
-	.widget-title {
-		color: #514530;
-		font-size: ce(16px, 13px);
-	}
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  .widget-title {
+    color: #514530;
+    font-size: ce(16px, 13px);
+  }
 }
 
 /* Search widget */
 .widget_search .search-submit {
-	display: none;
+  display: none;
 }
 
 
@@ -42,44 +105,49 @@
  */
 
 footer[role="contentinfo"] {
-	@extend .clear;
+  @extend %clearfix;
 
-	background-color: #FFFFFF;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-	margin-bottom: ce(20px, 13px);
+  background-color: #FFFFFF;
+  clear: both;
 
-	@include bp(medium) {
-		clear: both;
+  .footer-widget-area {
 
-		.footer-widget-area {
-			float: left;
-			margin-right: cp(10px, 640px);
-			width: cp(315px, 640px);
+    @include bp(medium) {
 
-			@include rem(margin-bottom, 10px);
+      float: left;
+      margin: 0 cp(10px, $context-medium) ce(10px, 13px) 0;
+      width: cp(315px, $context-medium);
 
-			&:nth-of-type(3) {
-				clear: left;
-			}
+      /* In the medium view, clear the third widget to the
+         next row and unset the right margin for the second
+         and fourth widgets */
 
-			&:nth-of-type(2), &:nth-of-type(4) {
-				margin-right: 0;
-			}
-		}
-	}
+      &:nth-of-type(3) {
+        clear: left;
+      }
 
-	@include bp(large) {
-		.footer-widget-area {
-			margin-right: cp(10px, 1024px);
-			width: cp(248px, 1024px);
+      &:nth-of-type(2),
+      &:nth-of-type(4) {
+        margin-right: 0;
+      }
+    }
 
-			&:nth-of-type(3) {
-				clear: none;
-			}
+    @include bp(large) {
 
-			&:last-of-type {
-				margin-right: 0;
-			}
-		}
-	}
+      /* In the large view, reset our right margin to be 10px in the
+         large context, and reset the clearing on the third widget so
+         that it floats against the second widget. */
+
+      margin-right: cp(10px, $context-large);
+      width: cp(248px, $context-large);
+
+      &:nth-of-type(3) {
+        clear: none;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
 }
