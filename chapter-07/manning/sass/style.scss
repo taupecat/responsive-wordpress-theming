@@ -14,7 +14,7 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
- manning is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+ "manning" is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
 
 Resetting and rebuilding styles have been helped along thanks to the fine work of
 Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
@@ -24,7 +24,24 @@ and Blueprint http://www.blueprintcss.org/
 
 
 /**
- * Our site variables.
+ * Compass CSS3 Mixins
+ * These will automatically create all the vendor-prefixed variations for
+ * CSS3 properties (such as transition and box-sizing) so you don't have
+ * to write them all out each time.
+ */
+
+@import "compass/css3";
+
+/**
+ * My Sass-Responsive project from GitHub, customized to the requirements of this project
+ */
+
+@import "responsive";
+
+/**
+ * Sass Variables
+ * Define some of our most commonly
+ * used strings as variables.
  */
 
 /* Colors */
@@ -33,31 +50,15 @@ $red: #771717;
 $gray: #D0D0D0;
 $taupe: #85745F;
 
-/* Default Font Size */
-
-$default-font-size: 13px !default;
-
-
 /**
- * Compass framework other utility partials
+ * Fonts
  */
 
-
-/* =Compass
--------------------------------------------------------------- */
-@import "compass";
-
-/* =Responsive
--------------------------------------------------------------- */
-@import "responsive";
-
-/* =Fonts
--------------------------------------------------------------- */
 @import "fonts";
 
 
 /**
- * Styling from Manning
+ * Styling from _s
  */
 
 
@@ -68,10 +69,6 @@ $default-font-size: 13px !default;
 /* =Global
 ----------------------------------------------- */
 @import "global";
-
-/* =Header
------------------------------------------------ */
-@import "header";
 
 /* =Menu
 ----------------------------------------------- */
@@ -99,9 +96,17 @@ $default-font-size: 13px !default;
 
 /* =Sidebars & Widgets
 ----------------------------------------------- */
-@import "sidebars";
 @import "widgets";
 
 /* =Infinite Scroll
 ----------------------------------------------- */
 @import "infinite-scroll";
+
+
+/**
+ * Additional partials not included in _s
+ */
+
+/* =Header
+----------------------------------------------- */
+@import "header";
