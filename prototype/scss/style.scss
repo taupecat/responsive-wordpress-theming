@@ -53,10 +53,10 @@ $taupe: #85745F;
 
 
 /**
- * Primary Navigation and Site Search
+ * Primary Navigation Menu
  */
 
-@import "navigation";
+@import "menu";
 
 
 /**
@@ -77,5 +77,4 @@ $taupe: #85745F;
  * Sidebars & Widgets
  */
 
-@import "sidebars";
 @import "widgets";
