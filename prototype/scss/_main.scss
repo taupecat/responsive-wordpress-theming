@@ -8,14 +8,14 @@
 	@include bp(medium) {
 		float: right;
 		margin-left: 1px;
-		width: cp(393px, 640px);
+		width: cp(393px, $context-medium);
 	}
 
 	@include bp(large) {
-		width: cp(628px, 1024px);
+		width: cp(632px, $context-large);
 
 		body.home & {
-			width: cp(533px, 1024px);
+			width: cp(533px, $context-large);
 		}
 	}
 }
@@ -27,7 +27,7 @@ main {
 
 	@include bp(medium) {
 		float: right;
-		padding: ce(10px, 13px) cp(10px, 640px);
+		padding: ce(10px, 13px) cp(10px, $context-medium);
 	}
 
 	.entry-title {
