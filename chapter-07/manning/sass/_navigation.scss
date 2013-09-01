@@ -1,15 +1,65 @@
-.site-main [class*="navigation"] {
-	margin: 0 0 1.5em;
-	overflow: hidden;
+/**
+ * Archive Next/Previous Navigation
+ */
 
-	.nav-previous {
-		float: left;
-		width: 50%;
+%paging-navigation-pseudo-elements {
+	background-color: $taupe;
+	border-radius: 50%;
+	color: #FFFFFF;
+	display: block;
+	font-family: genericons;
+	font-size: ce(36px, 18px);
+	font-style: normal;
+	height: ce(40px, 36px);
+	left: 50%;
+	line-height: ce(40px, 36px);
+	margin-left: ce(-20px, 36px);
+	position: absolute;
+	text-align: center;
+	top: -100%;
+	width: ce(40px, 36px);
+
+	@include transition(background-color 0.2s linear);
+}
+
+.paging-navigation {
+	@extend %clearfix;
+	margin-top: 5em;
+
+	a {
+		color: $taupe;
+		display: block;
+		font-size: ce(18px, 13px);
+		font-style: italic;
+		line-height: 2;
+		position: relative;
+
+		@include transition(color 0.2s linear);
+
+		&:hover, &:active, &:focus {
+			color: $red;
+
+			&:before, &:after {
+				background-color: $red;
+			}
+		}
 	}
 
-	.nav-next {
+	.nav-previous a {
+		float: left;
+
+		&:after {
+			@extend %paging-navigation-pseudo-elements;
+			content: '\f430';
+		}
+	}
+
+	.nav-next a {
 		float: right;
-		text-align: right;
-		width: 50%;
+
+		&:before {
+			@extend %paging-navigation-pseudo-elements;
+			content: '\f429';
+		}
 	}
 }
