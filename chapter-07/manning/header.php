@@ -41,11 +41,11 @@
     </a>
     <!-- // [rel="home"] -->
 
-    <!-- Begin Navigation/Search Bar -->
+    <!-- Begin Navigation -->
 
     <div class="navbar">
 
-      <div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'manning' ); ?>"><?php _e( 'Skip to content', 'manning' ); ?></a></div>
+      <a href="#content" class="screen-reader-text skip-link"><?php _e( 'Skip to content', 'manning' ); ?></a>
 
       <nav id="site-navigation" class="primary-navigation" role="navigation">
 
@@ -62,27 +62,10 @@
 
       <!-- End Primary Navigation -->
 
-      <!-- Begin Search Form -->
-
-      <a href="#!" class="toggle-search">Search</a>
-
-      <form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-
-        <label>
-          <span class="screen-reader-text"><?php _e( 'Search for:', 'manning' ); ?></span>
-          <input type="search" placeholder="<?php esc_attr_e( 'Search &hellip;', 'manning' ); ?>" value="" name="s" title="<?php esc_attr_e( 'Search for:', 'manning' ); ?>" />
-        </label>
-
-        <input type="submit" class="searchsubmit" value="<?php esc_attr_e( 'Search', 'manning' ); ?>" />
-
-      </form>
-
-      <!-- End Search Form -->
-
     </div>
     <!-- // .navbar -->
 
-    <!-- End Navigation/Search Bar -->
+    <!-- End Navigation -->
 
   </header>
   <!-- #masthead -->
