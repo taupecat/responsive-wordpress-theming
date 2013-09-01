@@ -20,11 +20,13 @@ $bp-large: 900px;
 // Contexts
 
 // Not necessarily the same as breakpoints, but a point from which to judge
-// relative values.  Put common ones here, such as the maximum widht of
+// relative values.  Put common ones here, such as the maximum width of
 // the content.
 
 // Example:
-// $context-small: 420px;
+$context-small: 320px;
+$context-medium: 640px;
+$context-large: 1024px;
 
 
 
