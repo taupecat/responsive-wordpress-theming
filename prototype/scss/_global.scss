@@ -36,7 +36,7 @@ body {
 		clear: both;
 	}
 
-	zoom: 1; /* Fore IE 6/7 (trigger hasLayout) */
+	zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 
 /* Links */
@@ -47,4 +47,13 @@ a {
 	&:hover, &:active, &:focus {
 		color: #5C1111;
 	}
+}
+
+/* Page Container */
+.site {
+	box-shadow: 8px 0 12px rgba(0, 0, 0, 0.2),
+		-8px 0 12px rgba(0, 0, 0, 0.2),
+		0 8px 12px rgba(0, 0, 0, 0.2);
+	margin: 0 auto ce(20px, 13px);
+	max-width: 1024px;
 }
