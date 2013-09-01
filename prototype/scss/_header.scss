@@ -36,7 +36,7 @@ header[role="banner"] a[rel="home"] {
 
 		@include bp(medium) {
 			float: left;
-			margin: ce(25px, 13px) cp(25px, 640px);
+			margin: ce(25px, 13px) cp(25px, $context-medium);
 		}
 	}
 
