@@ -4,12 +4,13 @@
   <title>Responsive WordPress Theme Prototype | Home</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="prototype.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="home blog group-blog">
 
 <div id="page" class="hfeed site">
+
 
   <!-- Begin Site Header -->
 
@@ -31,7 +32,7 @@
     </a>
     <!-- // [rel="home"] -->
 
-    <!-- Begin Navigation/Search Bar -->
+    <!-- Begin Navigation -->
 
     <div class="navbar">
 
@@ -85,48 +86,35 @@
 
       <!-- End Primary Navigation -->
 
-      <!-- Begin Search Form -->
-
-      <a href="#!" class="toggle-search">Search</a>
-
-      <form role="search" method="get" class="searchform" action="http://prototype.local/">
-
-        <label>
-
-          <span class="screen-reader-text">Search for:</span>
-
-          <input type="search" placeholder="Search &hellip;" value="" name="s" title="Search for:" />
-
-        </label>
-
-        <input type="submit" class="searchsubmit" value="Search" />
-
-      </form>
-
-      <!-- End Search Form -->
-
     </div>
     <!-- // .navbar -->
 
-    <!-- End Navigation/Search Bar -->
+    <!-- End Navigation -->
 
   </header>
 
   <!-- End Site Header -->
 
+
   <div id="content" class="site-content">
 
-    <!-- Begin Right Sidebar -->
+
+    <!-- Begin Right Sidebar (Home Page Only) -->
 
     <div id="sidebar-right" class="sidebar-right">
 
-      <!-- Begin Secondary Sidebar -->
+
+      <!-- Begin Secondary Sidebar (Home Page Only) -->
+      <!-- Secondary sidebar prototype contains the third and fourth sample widgets.
+           For the purposes of the prototype ONLY, we will be repeating the secondary
+           sidebar in the "Left Sidebar" space after the main content. -->
 
       <section id="sidebar-secondary" class="widget-area sidebar sidebar-secondary">
 
         <!-- Begin Third Sample Widget -->
 
         <aside id="archives-2" class="widget widget_archive">
+
           <h1 class="widget-title">Archives</h1>
 
           <ul>
@@ -148,7 +136,9 @@
         <!-- Begin Fourth Sample Widget -->
 
         <aside id="categories-2" class="widget widget_categories">
+
           <h1 class="widget-title">Categories</h1>
+
           <ul>
             <li class="cat-item cat-item-2"><a href="http://manning.local/category/aciform/" title="View all posts filed under aciform">aciform</a></li>
             <li class="cat-item cat-item-3"><a href="http://manning.local/category/antiquarianism/" title="View all posts filed under antiquarianism">antiquarianism</a></li>
@@ -160,6 +150,7 @@
             <li class="cat-item cat-item-10"><a href="http://manning.local/category/cat-b/" title="View all posts filed under Cat B">Cat B</a></li>
             <li class="cat-item cat-item-11"><a href="http://manning.local/category/cat-c/" title="View all posts filed under Cat C">Cat C</a></li>
           </ul>
+
         </aside>
 
         <!-- End Fourth Sample Widget -->
@@ -169,10 +160,12 @@
 
       <!-- End Secondary Sidebar -->
 
+
     </div>
     <!-- // #sidebar-right -->
 
-    <!-- End Left Sidebar -->
+    <!-- End Right Sidebar -->
+
 
     <!-- Begin Main Content -->
 
@@ -215,6 +208,7 @@
     <div id="sidebar-left" class="sidebar-left">
 
       <!-- Begin Primary Sidebar -->
+      <!-- The primary sidebar appears on every page of the site. -->
 
       <section id="sidebar-primary" class="widget-area sidebar sidebar-primary">
 
@@ -258,13 +252,19 @@
 
       <!-- End Primary Sidebar -->
 
-      <!-- Begin Secondary Sidebar -->
+      <!-- Begin Secondary Sidebar (Home Page Only) -->
+
+      <!-- Normally, we wouldn't duplicate the same content in two different areas of the page,
+           but for the purposes of this prototype, it's more important to work out the arrangement
+           of content at various breakpoints than to worry about duplication of content.  In
+           the final, production theme, content will be moved in the DOM via JavaScript. -->
 
       <section id="sidebar-secondary" class="widget-area sidebar sidebar-secondary">
 
         <!-- Begin Third Sample Widget -->
 
         <aside id="archives-2" class="widget widget_archive">
+
           <h1 class="widget-title">Archives</h1>
 
           <ul>
@@ -286,7 +286,9 @@
         <!-- Begin Fourth Sample Widget -->
 
         <aside id="categories-2" class="widget widget_categories">
+
           <h1 class="widget-title">Categories</h1>
+
           <ul>
             <li class="cat-item cat-item-2"><a href="http://manning.local/category/aciform/" title="View all posts filed under aciform">aciform</a></li>
             <li class="cat-item cat-item-3"><a href="http://manning.local/category/antiquarianism/" title="View all posts filed under antiquarianism">antiquarianism</a></li>
@@ -310,7 +312,7 @@
     </div>
     <!-- // #sidebar-left -->
 
-    <!-- End Right Sidebar -->
+    <!-- End Left Sidebar -->
 
   </div>
   <!-- // #content -->
@@ -320,75 +322,80 @@
 
   <footer id="colophon" class="site-footer" role="contentinfo">
 
-    <!-- Begin Footer Widget Area 1 -->
+    <div class="site-info">
 
-    <section id="footer-widget-1" class="footer-widget-area">
+      <!-- Begin Footer Widget Area 1 -->
 
-      <aside id="meta-2" class="widget widget_meta">
+      <section id="footer-widget-1" class="footer-widget-area">
 
-        <h1 class="widget-title">Meta</h1>
+        <aside id="meta-2" class="widget widget_meta">
 
-        <ul>
-          <li><a href="http://manning.local/wp-admin/">Site Admin</a></li>
-          <li><a href="http://manning.local/wp-login.php?action=logout&#038;_wpnonce=ad6237e387">Log out</a></li>
-          <li><a href="http://manning.local/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
-          <li><a href="http://manning.local/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
-          <li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
-        </ul>
+          <h1 class="widget-title">Meta</h1>
 
-      </aside>
+          <ul>
+            <li><a href="http://manning.local/wp-admin/">Site Admin</a></li>
+            <li><a href="http://manning.local/wp-login.php?action=logout&#038;_wpnonce=ad6237e387">Log out</a></li>
+            <li><a href="http://manning.local/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+            <li><a href="http://manning.local/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+            <li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+          </ul>
 
-    </section>
+        </aside>
 
-    <!-- End Footer Widget Area 1 -->
+      </section>
 
-    <!-- Begin Footer Widget Area 2 -->
+      <!-- End Footer Widget Area 1 -->
 
-    <section id="footer-widget-2" class="footer-widget-area">
+      <!-- Begin Footer Widget Area 2 -->
 
-      <aside id="text-2" class="widget widget_text">
+      <section id="footer-widget-2" class="footer-widget-area">
 
-        <h1 class="widget-title">Text Widget</h1>
+        <aside id="text-2" class="widget widget_text">
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+          <h1 class="widget-title">Text Widget</h1>
 
-      </aside>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
 
-    </section>
+        </aside>
 
-    <!-- End Footer Widget Area 2 -->
+      </section>
 
-    <!-- Begin Footer Widget Area 3 -->
+      <!-- End Footer Widget Area 2 -->
 
-    <section id="footer-widget-3" class="footer-widget-area">
+      <!-- Begin Footer Widget Area 3 -->
 
-      <aside id="text-3" class="widget widget_text">
+      <section id="footer-widget-3" class="footer-widget-area">
 
-        <h1 class="widget-title">Text Widget</h1>
+        <aside id="text-3" class="widget widget_text">
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+          <h1 class="widget-title">Text Widget</h1>
 
-      </aside>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
 
-    </section>
+        </aside>
 
-    <!-- End Footer Widget Area 3 -->
+      </section>
 
-    <!-- Begin Footer Widget Area 4 -->
+      <!-- End Footer Widget Area 3 -->
 
-    <section id="footer-widget-4" class="footer-widget-area">
+      <!-- Begin Footer Widget Area 4 -->
 
-      <aside id="widget-4" class="widget widget_text">
+      <section id="footer-widget-4" class="footer-widget-area">
 
-        <h1 class="widget-title">Text Widget</h1>
+        <aside id="widget-4" class="widget widget_text">
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+          <h1 class="widget-title">Text Widget</h1>
 
-      </aside>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
 
-    </section>
+        </aside>
 
-    <!-- End Footer Widget Area 4 -->
+      </section>
+
+      <!-- End Footer Widget Area 4 -->
+
+    </div>
+    <!-- // .site-info -->
 
   </footer>
 
