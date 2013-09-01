@@ -592,39 +592,39 @@ body {
 
 /* Accessibility */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_global\.scss}line{font-family:\0000322}}
-.screen-reader-text a {
+.screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute;
 }
 
 /* Micro Clearfix (from Nicolas Gallagher) */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_global\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_global\.scss}line{font-family:\0000330}}
 header[role="banner"] a[rel="home"], .navbar, .paging-navigation, footer[role="contentinfo"] {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_global\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_global\.scss}line{font-family:\0000331}}
 header[role="banner"] a[rel="home"]:before, .navbar:before, .paging-navigation:before, footer[role="contentinfo"]:before, header[role="banner"] a[rel="home"]:after, .navbar:after, .paging-navigation:after, footer[role="contentinfo"]:after {
   content: '';
   display: table;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_global\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_global\.scss}line{font-family:\0000336}}
 header[role="banner"] a[rel="home"]:after, .navbar:after, .paging-navigation:after, footer[role="contentinfo"]:after {
   clear: both;
 }
 
 /* Links */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_global\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_global\.scss}line{font-family:\0000345}}
 a {
   color: #771717;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_global\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_global\.scss}line{font-family:\0000348}}
 a:hover, a:active, a:focus {
   color: #5C1111;
 }
 
 /* Page Container */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_global\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_global\.scss}line{font-family:\0000354}}
 .site {
   box-shadow: 8px 0 12px rgba(0, 0, 0, 0.2), -8px 0 12px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.2);
   margin: 0 auto 1.53846em;
@@ -932,7 +932,7 @@ header[role="banner"] a[rel="home"] .site-title {
  * whether or not it is on the front/home page
  */
 @media only all and (min-width: 37.5em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_content\.scss}line{font-family:\000037}}
   .content-area {
     float: right;
     margin-left: 1px;
@@ -940,36 +940,36 @@ header[role="banner"] a[rel="home"] .site-title {
   }
 }
 @media only all and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_content\.scss}line{font-family:\000037}}
   .content-area {
     width: 61.71875%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_content\.scss}line{font-family:\0000317}}
   body.home .content-area {
     width: 52.05078%;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_content\.scss}line{font-family:\0000323}}
 main {
   background-color: #FFFFFF;
   margin-bottom: 1px;
   padding: 1.38461538461538em 3.75%;
 }
 @media only all and (min-width: 37.5em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_content\.scss}line{font-family:\0000323}}
   main {
     float: right;
     padding: 0.76923em 1.5625%;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_content\.scss}line{font-family:\0000333}}
 main .entry-title {
   font-size: 1.38462em;
   font-weight: bold;
   margin-bottom: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_content\.scss}line{font-family:\0000339}}
 main p {
   margin: 0.5em 0;
 }
@@ -977,7 +977,7 @@ main p {
 /**
  * Archive Page Styling
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_content\.scss}line{font-family:\0000349}}
 .page-title {
   font-size: 1.53846em;
   font-weight: 600;
@@ -987,21 +987,21 @@ main p {
   text-transform: uppercase;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_content\.scss}line{font-family:\0000358}}
 .post {
   margin-bottom: 4em;
   /* Featured Image */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_content\.scss}line{font-family:\0000362}}
 .post .attachment-post-thumbnail {
   display: block;
   margin: 1em auto 0.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_content\.scss}line{font-family:\0000367}}
 .post .entry-title {
   margin: 1em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_content\.scss}line{font-family:\0000371}}
 .post .entry-meta {
   font-size: 0.92308em;
   font-weight: 700;
@@ -1010,45 +1010,43 @@ main p {
 }
 
 /**
+ * Post Pagination
+ */
+/**
  * Archive Next/Previous Navigation
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\0000384}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_navigation\.scss}line{font-family:\000035}}
 .paging-navigation .nav-previous a:after, .paging-navigation .nav-next a:before {
   background-color: #85745f;
-  border-radius: 100em;
+  border-radius: 50%;
   color: #FFFFFF;
   display: block;
   font-family: genericons;
   font-size: 2em;
-  /* 36px / 18px */
   font-style: normal;
-  height: 1.11111111111111em;
-  /* 40px / 36px */
+  height: 1.11111em;
   left: 50%;
-  line-height: 1.11111111111111em;
-  /* 40px / 36px */
+  line-height: 1.11111em;
   margin-left: -0.55556em;
   position: absolute;
   text-align: center;
   top: -100%;
-  width: 1.11111111111111em;
-  /* 40px / 36px */
+  width: 1.11111em;
   -webkit-transition: background-color 0.2s linear;
   -moz-transition: background-color 0.2s linear;
   -o-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\00003104}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_navigation\.scss}line{font-family:\0000325}}
 .paging-navigation {
   margin-top: 5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\00003108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_navigation\.scss}line{font-family:\0000329}}
 .paging-navigation a {
   color: #85745f;
   display: block;
-  font-size: 1.38461538461538em;
-  /* 18px / 13px */
+  font-size: 1.38462em;
   font-style: italic;
   line-height: 2;
   position: relative;
@@ -1057,27 +1055,27 @@ main p {
   -o-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_navigation\.scss}line{font-family:\0000339}}
 .paging-navigation a:hover, .paging-navigation a:active, .paging-navigation a:focus {
   color: #771717;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\00003121}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_navigation\.scss}line{font-family:\0000342}}
 .paging-navigation a:hover:before, .paging-navigation a:hover:after, .paging-navigation a:active:before, .paging-navigation a:active:after, .paging-navigation a:focus:before, .paging-navigation a:focus:after {
   background-color: #771717;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\00003127}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_navigation\.scss}line{font-family:\0000348}}
 .paging-navigation .nav-previous a {
   float: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\00003130}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_navigation\.scss}line{font-family:\0000351}}
 .paging-navigation .nav-previous a:after {
   content: '\f429';
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\00003136}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_navigation\.scss}line{font-family:\0000357}}
 .paging-navigation .nav-next a {
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_main\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/taupecat\/Dropbox\/\%20Responsive\%20WordPress\%20Themes\%20Book\/Code\/prototype\/scss\/_navigation\.scss}line{font-family:\0000360}}
 .paging-navigation .nav-next a:before {
   content: '\f430';
 }
