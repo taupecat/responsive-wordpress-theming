@@ -12,17 +12,22 @@
 
   <footer id="colophon" class="site-footer" role="contentinfo">
 
-    <?php for ( $i = 1; $i < 5; $i++ ): ?>
+    <div class="site-info">
 
-      <!-- Begin Footer Widget Area <?php echo $i; ?> -->
+      <?php for ( $i = 1; $i < 5; $i++ ): ?>
 
-      <section id="footer-widget-area-<?php echo $i; ?>" class="footer-widget-area footer-widget-area-<?php echo $i; ?>">
-        <?php dynamic_sidebar( 'footer-widget-area-' . $i ); ?>
-      </section>
+        <!-- Begin Footer Widget Area <?php echo $i; ?> -->
 
-      <!-- End Footer Widget Area <?php echo $i; ?> -->
+        <section id="footer-widget-area-<?php echo $i; ?>" class="footer-widget-area footer-widget-area-<?php echo $i; ?>">
+          <?php dynamic_sidebar( 'footer-widget-area-' . $i ); ?>
+        </section>
 
-    <?php endfor; ?>
+        <!-- End Footer Widget Area <?php echo $i; ?> -->
+
+      <?php endfor; ?>
+
+    </div>
+    <!-- // .site-info -->
 
   </footer>
   <!-- #colophon -->
