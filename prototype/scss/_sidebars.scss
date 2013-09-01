@@ -30,8 +30,8 @@
 		body.home & {
 			display: block;
 			float: right;
-			margin-left: cp(10px, 1024px);
-			width: cp(237px, 1024px);
+			margin-left: 3px;
+			width: cp(242px, 1024px);
 		}
 	}
 }
@@ -39,16 +39,20 @@
 .sidebar-left {
 	@include bp(medium) {
 		float: left;
-		margin-right: cp(10px, 640px);
-		width: cp(240px, 640px);
+		width: cp(245px, 640px);
 	}
 
 	@include bp(large) {
-		margin-right: cp(10px, 1024px);
 		width: cp(386px, 1024px);
 
 		body.home & {
-			width: cp(237px, 1024px);
+			width: cp(242px, 1024px);
 		}
 	}
+}
+
+.sidebar-primary,
+.sidebar-secondary {
+	background-color: #E9E2DD;
+	margin-bottom: 1px;
 }
