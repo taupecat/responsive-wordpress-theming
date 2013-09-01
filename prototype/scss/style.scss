@@ -4,11 +4,13 @@
  * CSS3 properties (such as transition and box-sizing) so you don't have
  * to write them all out each time.
  */
+
 @import "compass/css3";
 
 /**
- * My Sass-Responsive project from GitHub
+ * My Sass-Responsive project from GitHub, customized to the requirements of this project
  */
+
 @import "responsive";
 
 /**
@@ -22,7 +24,6 @@
 $red: #771717;
 $gray: #D0D0D0;
 $taupe: #85745F;
-
 
 /**
  * Fonts
