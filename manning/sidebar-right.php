@@ -6,23 +6,10 @@
  * @package Manning
  */
 ?>
-  <!-- Begin Right Sidebar -->
+<!-- Begin Right Sidebar -->
 
-  <div id="sidebar-right" class="sidebar-right">
+<div id="sidebar-right" class="sidebar-right">
+</div>
+<!-- // #sidebar-right -->
 
-    <!-- Begin Secondary Sidebar -->
-
-    <div id="sidebar-secondary" class="widget-area sidebar sidebar-secondary" role="complementary">
-      <?php do_action( 'before_sidebar' ); ?>
-
-      <?php dynamic_sidebar( 'sidebar-secondary' ); ?>
-
-    </div>
-    <!-- #sidebar-secondary -->
-
-    <!-- End Secondary Sidebar -->
-
-  </div>
-  <!-- // #sidebar-right -->
-
-  <!-- End Right Sidebar -->
+<!-- End Right Sidebar -->
