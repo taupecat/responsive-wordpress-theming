@@ -1,20 +1,12 @@
-/* Box Sizing */
+/* Set a maximum width on our page container,
+   center it and give it a drop shadow. */
 
-*, *:before, *:after {
-  @include box-sizing(border-box);
-}
-
-/* Fonts */
-
-html {
-  font: cp($default-font-size, 16px) $opensans;
-  line-height: 1.2;
-}
-
-/* Body */
-
-body {
-  background: #877865 url("images/background.jpg");
+.site {
+  box-shadow: 8px 0 12px rgba(0, 0, 0, 0.2),
+    -8px 0 12px rgba(0, 0, 0, 0.2),
+    0 8px 12px rgba(0, 0, 0, 0.2);
+  margin: 0 auto ce(20px, 13px);
+  max-width: 1160px;
 }
 
 button,
@@ -284,6 +276,8 @@ a {
 
 /* Clearing */
 .clear,
+[class*="content"],
+[class*="site"],
 %clearfix {
   &:before,
   &:after {
@@ -296,13 +290,4 @@ a {
   }
 
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-}
-
-/* Page Container */
-.site {
-  box-shadow: 8px 0 12px rgba(0, 0, 0, 0.2),
-    -8px 0 12px rgba(0, 0, 0, 0.2),
-    0 8px 12px rgba(0, 0, 0, 0.2);
-  margin: 0 auto ce(20px, 13px);
-  max-width: 1160px;
 }
