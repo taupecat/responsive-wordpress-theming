@@ -8,7 +8,8 @@
  */
 ?>
 
-	</div><!-- #content -->
+	</div>
+	<!-- #content -->
 
 <?php
 /**
@@ -43,12 +44,7 @@ if ( is_active_sidebar( 'footer-widget-area' ) ||
 	</footer>
 	<!-- #colophon -->
 
-<?php
-/**
- * End our testing for an active footer widget area.
- */
-endif;
-?>
+<?php endif; // testing for an active footer widget area. ?>
 
 </div>
 <!-- #page -->
