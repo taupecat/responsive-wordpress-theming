@@ -9,6 +9,23 @@
 <!-- Begin Right Sidebar -->
 
 <div id="sidebar-right" class="sidebar-right">
+
+	<!-- TEMPORARY - this is here ONLY to test CSS sizing before we add
+         DOM manipulation with JavaScript. -->
+
+	<!-- Begin Secondary Sidebar -->
+
+	<div id="sidebar-secondary" class="widget-area sidebar sidebar-secondary" role="complementary">
+
+		<?php do_action( 'before_sidebar' ); ?>
+
+		<?php dynamic_sidebar( 'sidebar-secondary' ); ?>
+
+	</div>
+	<!-- #sidebar-secondary -->
+
+	<!-- End Secondary Sidebar -->
+
 </div>
 <!-- // #sidebar-right -->
 
