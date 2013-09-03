@@ -1,19 +1,19 @@
 .sticky {
 }
 .hentry {
-  margin: 0 0 1.5em;
+	margin: 0 0 1.5em;
 }
 .byline,
 .updated {
-  display: none;
+	display: none;
 }
 .single .byline,
 .group-blog .byline {
-  display: inline;
+	display: inline;
 }
 .page-links {
-  clear: both;
-  margin: 0 0 1.5em;
+	clear: both;
+	margin: 0 0 1.5em;
 }
 
 
@@ -23,19 +23,22 @@
  * whether or not it is on the front/home page
  */
 .content-area {
-  @include bp(medium) {
-    float: right;
-    margin-left: 1px;
-    width: cp(393px, $context-medium);
-  }
+	@include bp(medium) {
+		float: right;
+		margin-left: 1px;
+		width: cp(393px, $context-medium);
+	}
 
-  @include bp(large) {
-    width: cp(632px, $context-large);
+	@include bp(large) {
+		body.home & {
+			width: cp(533px, $context-large);
+		}
 
-    body.home & {
-      width: cp(533px, $context-large);
-    }
-  }
+		&,
+		body.home &.no-secondary-sidebar {
+			width: cp(632px, $context-large);
+		}
+	}
 }
 
 
@@ -43,27 +46,27 @@
  * <main> element
  */
 main {
-  background-color: #FFFFFF;
-  margin-bottom: 1px;
-  padding: ce(18px, 13px) cp(12px, $context-small);
+	background-color: #FFFFFF;
+	margin-bottom: 1px;
+	padding: ce(18px, 13px) cp(12px, $context-small);
 
-  @include bp(medium) {
-    padding: ce(10px, 13px) cp(10px, 393px);
-  }
+	@include bp(medium) {
+		padding: ce(10px, 13px) cp(10px, 393px);
+	}
 
-  @include bp(large) {
-    padding: ce(10px, 13px) cp(10px, 628px);
+	@include bp(large) {
+		padding: ce(10px, 13px) cp(10px, 628px);
 
-    body.home & {
-      padding: ce(10px, 13px) cp(10px, 530px);
-    }
-  }
+		body.home & {
+			padding: ce(10px, 13px) cp(10px, 530px);
+		}
+	}
 
-  .entry-title {
-    font-size: ce(18px, 13px);
-    font-weight: bold;
-    margin-bottom: 1em;
-  }
+	.entry-title {
+		font-size: ce(18px, 13px);
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
 }
 
 
@@ -71,31 +74,31 @@ main {
  * Archive Page Styling
  */
 .page-title {
-  font-size: ce(20px, 13px);
-  font-weight: 600;
-  margin: ce(20px, 20px) 0 ce(32px, 20px);
-  margin: cr(20px) 0 cr(32px);
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
-  text-transform: uppercase;
+	font-size: ce(20px, 13px);
+	font-weight: 600;
+	margin: ce(20px, 20px) 0 ce(32px, 20px);
+	margin: cr(20px) 0 cr(32px);
+	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+	text-transform: uppercase;
 }
 
 .post {
-  margin-bottom: 4em;
+	margin-bottom: 4em;
 
-  /* Featured Image */
-  .attachment-post-thumbnail {
-    display: block;
-    margin: 1em auto 0.5em;
-  }
+	/* Featured Image */
+	.attachment-post-thumbnail {
+		display: block;
+		margin: 1em auto 0.5em;
+	}
 
-  .entry-title {
-    margin: 1em 0;
-  }
+	.entry-title {
+		margin: 1em 0;
+	}
 
-  .entry-meta {
-    font-size: ce(12px, 13px);
-    font-weight: 700;
-    line-height: 1.5;
-    margin: 0.5em 0;
-  }
+	.entry-meta {
+		font-size: ce(12px, 13px);
+		font-weight: 700;
+		line-height: 1.5;
+		margin: 0.5em 0;
+	}
 }

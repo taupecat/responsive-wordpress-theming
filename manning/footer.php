@@ -8,29 +8,47 @@
  */
 ?>
 
-  </div><!-- #content -->
+	</div><!-- #content -->
 
-  <footer id="colophon" class="site-footer" role="contentinfo">
+<?php
+/**
+ * Only display footer if there is something to display.
+ */
 
-    <div class="site-info">
+if ( is_active_sidebar( 'footer-widget-area' ) ||
+		 is_active_sidebar( 'footer-widget-area-2' ) ||
+		 is_active_sidebar( 'footer-widget-area-3' ) ||
+		 is_active_sidebar( 'footer-widget-area-4' ) ):
+?>
 
-      <?php for ( $i = 1; $i < 5; $i++ ): ?>
+	<footer id="colophon" class="site-footer" role="contentinfo">
 
-        <!-- Begin Footer Widget Area <?php echo $i; ?> -->
+		<div class="site-info">
 
-        <section id="footer-widget-area-<?php echo $i; ?>" class="footer-widget-area footer-widget-area-<?php echo $i; ?>">
-          <?php dynamic_sidebar( 'footer-widget-area-' . $i ); ?>
-        </section>
+			<?php for ( $i = 1; $i < 5; $i++ ): ?>
 
-        <!-- End Footer Widget Area <?php echo $i; ?> -->
+				<!-- Begin Footer Widget Area <?php echo $i; ?> -->
 
-      <?php endfor; ?>
+				<section id="footer-widget-area-<?php echo $i; ?>" class="footer-widget-area footer-widget-area-<?php echo $i; ?>">
+					<?php dynamic_sidebar( 'footer-widget-area-' . $i ); ?>
+				</section>
 
-    </div>
-    <!-- // .site-info -->
+				<!-- End Footer Widget Area <?php echo $i; ?> -->
 
-  </footer>
-  <!-- #colophon -->
+			<?php endfor; ?>
+
+		</div>
+		<!-- // .site-info -->
+
+	</footer>
+	<!-- #colophon -->
+
+<?php
+/**
+ * End our testing for an active footer widget area.
+ */
+endif;
+?>
 
 </div>
 <!-- #page -->
