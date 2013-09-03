@@ -7,17 +7,19 @@
  */
 
 /**
- * Check to see if the secondary sidebar is active (that is, has any active widgets)
- * AND we're on the home page.  If both of those conditions are true, set a class
- * on our left sidebar (and also on in our main content area) to change the 
- * proportions to what they would be on sub pages (which never have a right sidebar)
- * in the wide view.
+ * Check to see if the secondary sidebar is active
+ * (that is, has any active widgets) AND we're on the
+ * home page.  If both of those conditions are true,
+ * set a class on our left sidebar (and also on in our
+ * main content area) to change the proportions to what
+ * they would be on sub pages (which never have a right
+ * sidebar) in the wide view.
  */
 
-if ( is_front_page() && ! is_active_sidebar( 'sidebar-secondary' ) ) {
-	$left_sidebar_class = 'sidebar-left no-secondary-sidebar';
+if ( ( is_front_page() || is_home() ) && ! is_active_sidebar( 'sidebar-secondary' ) ) {
+  $left_sidebar_class = 'sidebar-left no-secondary-sidebar';
 } else {
-	$left_sidebar_class = 'sidebar-left';
+  $left_sidebar_class = 'sidebar-left';
 }
 ?>
 
@@ -59,23 +61,28 @@ if ( is_front_page() && ! is_active_sidebar( 'sidebar-secondary' ) ) {
 
 
 
-	<?php if ( is_home() || is_front_page() ): ?>
+<?php
+/**
+ * Only display the secondary sidebar if it contains widgets to display.
+ */
 
-	<!-- Begin Secondary Sidebar -->
+if ( ( is_home() || is_front_page() ) && is_active_sidebar( 'sidebar-secondary' ) ):
+?>
 
-	<div id="sidebar-secondary" class="widget-area sidebar sidebar-secondary" role="complementary">
-		<?php do_action( 'before_sidebar' ); ?>
+  <!-- Begin Secondary Sidebar -->
 
-		<?php dynamic_sidebar( 'sidebar-secondary' ); ?>
+  <div id="sidebar-secondary" class="widget-area sidebar sidebar-secondary" role="complementary">
 
-	</div>
-	<!-- #sidebar-secondary -->
+    <?php do_action( 'before_sidebar' ); ?>
 
-	<!-- End Secondary Sidebar -->
+    <?php dynamic_sidebar( 'sidebar-secondary' ); ?>
 
-	<?php endif; ?>
+  </div>
+  <!-- #sidebar-secondary -->
 
+  <!-- End Secondary Sidebar -->
 
+  <?php endif; // display secondary sidebar? ?>
 
 </div>
 <!-- #sidebar-left -->
