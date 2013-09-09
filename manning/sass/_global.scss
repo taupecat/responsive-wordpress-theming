@@ -1,3 +1,8 @@
+/* Box Sizing */
+*, *:before, *:after {
+  @include box-sizing(border-box);
+}
+
 /* Set a maximum width on our page container,
    center it and give it a drop shadow. */
 

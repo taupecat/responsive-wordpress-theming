@@ -20,3 +20,56 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+
+/**
+ * Set the width of the content area, variable on
+ * the viewport width and
+ * whether or not it is on the front/home page
+ */
+.content-area {
+  @include bp(medium) {
+    float: right;
+    margin-left: 1px;
+    width: cp(393px, $context-medium);
+  }
+
+  @include bp(large) {
+    body.home & {
+      width: cp(533px, $context-large);
+    }
+
+    &,
+    body.home &.no-secondary-sidebar {
+      width: cp(632px, $context-large);
+    }
+  }
+}
+
+
+/**
+ * <main> element
+ */
+main {
+  background-color: #FFFFFF;
+  margin-bottom: 1px;
+  padding: ce(18px, 13px) cp(12px, $context-small);
+
+  @include bp(medium) {
+    padding: ce(10px, 13px) cp(10px, 393px);
+  }
+
+  @include bp(large) {
+    padding: ce(10px, 13px) cp(10px, 628px);
+
+    body.home & {
+      padding: ce(10px, 13px) cp(10px, 530px);
+    }
+  }
+
+  .entry-title {
+    font-size: ce(18px, 13px);
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+}

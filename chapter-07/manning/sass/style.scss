@@ -26,6 +26,24 @@ and Blueprint http://www.blueprintcss.org/
 -------------------------------------------------------------- */
 @import "compass";
 
+/* =Responsive
+-------------------------------------------------------------- */
+@import "responsive";
+
+/* Colors */
+
+$red: #771717;
+$gray: #D0D0D0;
+$taupe: #85745F;
+
+/* Default Font Size */
+
+$default-font-size: 13px !default;
+
+/* =Fonts
+-------------------------------------------------------------- */
+@import "fonts";
+
 /**
  * Styling from _s
  */
@@ -70,3 +88,12 @@ and Blueprint http://www.blueprintcss.org/
 /* =Infinite Scroll
 ----------------------------------------------- */
 @import "infinite-scroll";
+
+
+/**
+ * Additional partials not included in _s
+ */
+
+/* =Header
+----------------------------------------------- */
+@import "header";

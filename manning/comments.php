@@ -43,7 +43,7 @@ if ( post_password_required() )
 			<?php
 				/* Loop through and list the comments. Tell wp_list_comments()
 				 * to use manning_comment() to format the comments.
-				 * If you want to overload this in a child theme then you can
+				 * If you want to override this in a child theme, then you can
 				 * define manning_comment() and that will be used instead.
 				 * See manning_comment() in inc/template-tags.php for more.
 				 */
