@@ -2,7 +2,6 @@ header[role="banner"] a[rel="home"] {
 	@extend %clearfix;
 
 	background: {
-		image: url(http://lorempixel.com/320/255/nature/2);
 		position: center center;
 		repeat: no-repeat;
 		size: cover;
@@ -15,7 +14,6 @@ header[role="banner"] a[rel="home"] {
 	text-decoration: none;
 
 	@include bp(medium) {
-		background-image: url(http://lorempixel.com/640/255/nature/2/);
 		font-size: ce(20px, 13px);
 		padding: 0;
 		text-align: left;
@@ -23,7 +21,6 @@ header[role="banner"] a[rel="home"] {
 
 	@include bp(large) {
 		background: {
-			image: url(http://lorempixel.com/1024/255/nature/2/);
 			position: center bottom;
 			size: cover;
 		}
