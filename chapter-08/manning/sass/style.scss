@@ -1,0 +1,99 @@
+/*!
+Theme Name: Manning
+Theme URI: http://manning.com/rotton
+Author: Tracy F. Rotton
+Author URI: http://www.taupecat.com/
+Description: A responsive WordPress theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: manning
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ Manning is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/* =Compass
+-------------------------------------------------------------- */
+@import "compass";
+
+/* =Responsive
+-------------------------------------------------------------- */
+@import "responsive";
+
+/* Colors */
+
+$red: #771717;
+$gray: #D0D0D0;
+$taupe: #85745F;
+
+/* Default Font Size */
+
+$default-font-size: 13px !default;
+
+/* =Fonts
+-------------------------------------------------------------- */
+@import "fonts";
+
+/**
+ * Styling from _s
+ */
+
+
+/* =Reset
+-------------------------------------------------------------- */
+@import "reset";
+
+/* =Global
+----------------------------------------------- */
+@import "global";
+
+/* =Menu
+----------------------------------------------- */
+@import "menu";
+
+/* =Content
+----------------------------------------------- */
+@import "content";
+
+/* =Asides
+----------------------------------------------- */
+@import "asides";
+
+/* =Media
+----------------------------------------------- */
+@import "media";
+
+/* =Navigation
+----------------------------------------------- */
+@import "navigation";
+
+/* =Comments
+----------------------------------------------- */
+@import "comments";
+
+/* =Widgets
+----------------------------------------------- */
+@import "widgets";
+
+/* =Infinite Scroll
+----------------------------------------------- */
+@import "infinite-scroll";
+
+
+/**
+ * Additional partials not included in _s
+ */
+
+/* =Header
+----------------------------------------------- */
+@import "header";
