@@ -28,9 +28,9 @@
 function manning_custom_header_setup() {
   add_theme_support( 'custom-header', apply_filters( 'manning_custom_header_args', array(
     'default-image'          => '',
-    'default-text-color'     => '000',
-    'width'                  => 1000,
-    'height'                 => 250,
+    'default-text-color'     => 'FFF',
+    'width'                  => 1160,
+    'height'                 => 255,
     'flex-height'            => true,
     'wp-head-callback'       => 'manning_header_style',
     'admin-head-callback'    => 'manning_admin_header_style',
