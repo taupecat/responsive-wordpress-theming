@@ -22,7 +22,7 @@ add_image_size('header-narrow', 600, 255, true);
  */
 function manning_custom_header_setup() {
   add_theme_support( 'custom-header', apply_filters( 'manning_custom_header_args', array(
-    'default-image'          => '%s/images/headers/sunset-wide.jpg',
+    'default-image'          => '%s/images/sunset-wide.jpg',
     'default-text-color'     => 'FFFFFF',
     'width'                  => 1160,
     'height'                 => 255,
@@ -44,20 +44,20 @@ function manning_custom_header_setup() {
    * manually.
    */
   register_default_headers( array(
-    'lorempixel-1' => array(
+    'sunset' => array(
       'url'           => '%s/images/sunset-wide.jpg',
       'thumbnail_url' => '%s/images/sunset-thumb.jpg',
-      'description'   => _x( 'Sunset', 'http://lorempixel.com/1160/255/nature/2/', 'manning' )
+      'description'   => _x( 'Sunset', 'manning' )
     ),
-    'lorempixel-2' => array(
+    'rocks' => array(
       'url'           => '%s/images/rocks-wide.jpg',
       'thumbnail_url' => '%s/images/rocks-thumb.jpg',
-      'description'   => _x( 'Rocks', 'http://lorempixel.com/1160/255/nature/3/', 'manning' )
+      'description'   => _x( 'Rocks', 'manning' )
     ),
     'placekitten' => array(
       'url'           => '%s/images/cat-wide.jpg',
       'thumbnail_url' => '%s/images/cat-thumb.jpg',
-      'description'   => _x( 'Adorable Placekitten', 'http://placekitten.com/1160/255?image=5', 'manning' )
+      'description'   => _x( 'Adorable Placekitten', 'manning' )
     ),
   ) );
 }
@@ -70,8 +70,6 @@ if ( ! function_exists( 'manning_header_style' ) ) :
  * @see manning_custom_header_setup().
  */
 function manning_header_style() {
-  global $_wp_additional_image_sizes;
-
   $header_image      = get_custom_header();
   $header_text_color = get_header_textcolor();
 
