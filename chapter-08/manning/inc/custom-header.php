@@ -27,7 +27,7 @@
  */
 function manning_custom_header_setup() {
   add_theme_support( 'custom-header', apply_filters( 'manning_custom_header_args', array(
-    'default-image'          => '',
+    'default-image'          => '%s/images/sunset-wide.jpg',
     'default-text-color'     => 'FFF',
     'width'                  => 1160,
     'height'                 => 255,
@@ -36,6 +36,34 @@ function manning_custom_header_setup() {
     'admin-head-callback'    => 'manning_admin_header_style',
     'admin-preview-callback' => 'manning_admin_header_image',
   ) ) );
+
+
+  /*
+   * Default custom headers packaged with the theme.
+   * %s is a placeholder for the theme template directory URI.
+   *
+   * Since these headers are not in the media library, the various
+   * different size versions (large, medium, small and thumb)
+   * need to be prepared and placed in the images/headers directory
+   * manually.
+   */
+  register_default_headers( array(
+    'sunset' => array(
+      'url'           => '%s/images/sunset-wide.jpg',
+      'thumbnail_url' => '%s/images/sunset-thumb.jpg',
+      'description'   => _x( 'Sunset', 'manning' )
+    ),
+    'rocks' => array(
+      'url'           => '%s/images/rocks-wide.jpg',
+      'thumbnail_url' => '%s/images/rocks-thumb.jpg',
+      'description'   => _x( 'Rocks', 'manning' )
+    ),
+    'placekitten' => array(
+      'url'           => '%s/images/cat-wide.jpg',
+      'thumbnail_url' => '%s/images/cat-thumb.jpg',
+      'description'   => _x( 'Adorable Placekitten', 'manning' )
+    ),
+  ) );
 }
 add_action( 'after_setup_theme', 'manning_custom_header_setup' );
 
@@ -46,16 +74,83 @@ if ( ! function_exists( 'manning_header_style' ) ) :
  * @see manning_custom_header_setup().
  */
 function manning_header_style() {
+  $header_image      = get_custom_header();
   $header_text_color = get_header_textcolor();
 
-  // If no custom options for text are set, let's bail
-  // get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
-  if ( HEADER_TEXTCOLOR == $header_text_color )
+  /**
+   * If we don't have a header and if no custom options for text
+   * are set, let's bail.
+   */
+  if ( empty( $header_image ) && ( HEADER_TEXTCOLOR == $header_text_color ) )
     return;
 
-  // If we get this far, we have custom styles. Let's do this.
+
+  /**
+   * Look first if the custom header image was uploaded
+   * by checking for the attachment ID.  If so, work with
+   * that one to get the proper header sizes (as defined
+   * above).
+   */
+  if ( isset( $header_image->attachment_id ) ) {
+
+    // Large
+    $header_image_wide = esc_url( $header_image->url );
+
+    // Medium
+    $header_image_medium_src = wp_get_attachment_image_src( intval( $header_image->attachment_id ), 'header-medium' );
+    if ( isset( $header_image_medium_src[0] ) ) {
+      $header_image_medium = esc_url( $header_image_medium_src[0] );
+    } else {
+      $header_image_medium = $header_image_wide;
+    }
+
+    // Small
+    $header_image_narrow_src = wp_get_attachment_image_src( intval( $header_image->attachment_id ), 'header-narrow' );
+    if ( isset( $header_image_narrow_src[0] ) ) {
+      $header_image_narrwo = esc_url( $header_image_narrow_src[0] );
+    } else {
+      $header_image_narrow = $header_image_wide;
+    }
+
+  } else {
+
+    /**
+     * One of the default choices was selected.
+     */
+  
+    // Large
+    $header_image_wide = esc_url( $header_image->url );
+
+    // Medium
+    $header_image_medium = esc_url( str_replace( '-wide', '-medium', $header_image->url ) );
+
+    // Small
+    $header_image_narrow = esc_url( str_replace( '-wide', '-narrow', $header_image->url ) );
+  }
+
+  /**
+   * If we get this far, we have custom styles. Let's do this.
+   *
+   * The only CSS we need to define for our header area is the image
+   * itself; everything else is handled by the Sass in our project.
+   */
   ?>
   <style type="text/css">
+  header[role="banner"] a[rel="home"] {
+    background-image: url(<?php echo $header_image_narrow; ?>);
+  }
+
+  @media only all and (min-width: 40em) {
+    header[role="banner"] a[rel="home"] {
+      background-image: url(<?php echo $header_image_medium; ?>);
+    }
+  }
+
+  @media only all and (min-width: 64em) {
+    header[role="banner"] a[rel="home"] {
+      background-image: url(<?php echo $header_image_wide; ?>);
+    }
+  }
   <?php
     // Has the text been hidden?
     if ( 'blank' == $header_text_color ) :
@@ -69,7 +164,7 @@ function manning_header_style() {
     // If the user has set a custom color for the text use that
     else :
   ?>
-    .site-title a,
+    .site-title,
     .site-description {
       color: #<?php echo $header_text_color; ?>;
     }
