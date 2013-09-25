@@ -74,59 +74,70 @@ if ( ! function_exists( 'manning_header_style' ) ) :
  * @see manning_custom_header_setup().
  */
 function manning_header_style() {
-  $header_image      = get_custom_header();
+  $header_image      = get_header_image();
   $header_text_color = get_header_textcolor();
 
   /**
    * If we don't have a header and if no custom options for text
    * are set, let's bail.
    */
-  if ( empty( $header_image ) && ( HEADER_TEXTCOLOR == $header_text_color ) )
+echo 'HEADER_TEXTCOLOR = ' . HEADER_TEXTCOLOR . "<br>";
+echo '$header_text_color = ' . $header_text_color;
+exit;
+  if ( ! $header_image && ( HEADER_TEXTCOLOR == $header_text_color ) )
     return;
 
-
   /**
-   * Look first if the custom header image was uploaded
-   * by checking for the attachment ID.  If so, work with
-   * that one to get the proper header sizes (as defined
-   * above).
+   * Continuing on…
+   * If we have a header image, get full details on it
    */
-  if ( isset( $header_image->attachment_id ) ) {
-
-    // Large
-    $header_image_wide = esc_url( $header_image->url );
-
-    // Medium
-    $header_image_medium_src = wp_get_attachment_image_src( intval( $header_image->attachment_id ), 'header-medium' );
-    if ( isset( $header_image_medium_src[0] ) ) {
-      $header_image_medium = esc_url( $header_image_medium_src[0] );
-    } else {
-      $header_image_medium = $header_image_wide;
-    }
-
-    // Small
-    $header_image_narrow_src = wp_get_attachment_image_src( intval( $header_image->attachment_id ), 'header-narrow' );
-    if ( isset( $header_image_narrow_src[0] ) ) {
-      $header_image_narrwo = esc_url( $header_image_narrow_src[0] );
-    } else {
-      $header_image_narrow = $header_image_wide;
-    }
-
-  } else {
+  if ( $header_image ) {
+    $header_image = get_custom_header();
 
     /**
-     * One of the default choices was selected.
+     * Look first if the custom header image was uploaded
+     * by checking for the attachment ID.  If so, work with
+     * that one to get the proper header sizes (as defined
+     * above).
      */
-  
-    // Large
-    $header_image_wide = esc_url( $header_image->url );
+    if ( isset( $header_image->attachment_id ) ) {
 
-    // Medium
-    $header_image_medium = esc_url( str_replace( '-wide', '-medium', $header_image->url ) );
+      // Large
+      $header_image_wide = esc_url( $header_image->url );
 
-    // Small
-    $header_image_narrow = esc_url( str_replace( '-wide', '-narrow', $header_image->url ) );
+      // Medium
+      $header_image_medium_src = wp_get_attachment_image_src( intval( $header_image->attachment_id ), 'header-medium' );
+      if ( isset( $header_image_medium_src[0] ) ) {
+        $header_image_medium = esc_url( $header_image_medium_src[0] );
+      } else {
+        $header_image_medium = $header_image_wide;
+      }
+
+      // Small
+      $header_image_narrow_src = wp_get_attachment_image_src( intval( $header_image->attachment_id ), 'header-narrow' );
+      if ( isset( $header_image_narrow_src[0] ) ) {
+        $header_image_narrow = esc_url( $header_image_narrow_src[0] );
+      } else {
+        $header_image_narrow = $header_image_wide;
+      }
+
+    } else {
+
+      /**
+       * One of the default choices was selected.
+       */
+    
+      // Large
+      $header_image_wide = esc_url( $header_image->url );
+
+      // Medium
+      $header_image_medium = esc_url( str_replace( '-wide', '-medium', $header_image->url ) );
+
+      // Small
+      $header_image_narrow = esc_url( str_replace( '-wide', '-narrow', $header_image->url ) );
+    }
   }
+
 
   /**
    * If we get this far, we have custom styles. Let's do this.
