@@ -17,6 +17,12 @@
  */
 
 /**
+ * Create custom image sizes for headers at smaller breakpoints
+ */
+add_image_size('header-medium', 900, 255, true);
+add_image_size('header-narrow', 600, 255, true);
+
+/**
  * Setup the WordPress core custom header feature.
  *
  * @uses manning_header_style()
@@ -78,12 +84,9 @@ function manning_header_style() {
   $header_text_color = get_header_textcolor();
 
   /**
-   * If we don't have a header and if no custom options for text
+   * If we don't have a header image and if no custom options for text
    * are set, let's bail.
    */
-echo 'HEADER_TEXTCOLOR = ' . HEADER_TEXTCOLOR . "<br>";
-echo '$header_text_color = ' . $header_text_color;
-exit;
   if ( ! $header_image && ( HEADER_TEXTCOLOR == $header_text_color ) )
     return;
 
@@ -197,16 +200,23 @@ function manning_admin_header_style() {
     .appearance_page_custom-header #headimg {
       border: none;
     }
-    #headimg h1,
-    #desc {
+    #headimg {
+      background: url(<?php esc_url( header_image() ); ?>) no-repeat center top;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+      height: 255px;
+      padding: 4em 0 0;
+    }
+    #headimg .displaying-header-text {
+      font-weight: 400;
+      padding: 0 5%;
+      text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.75);
     }
     #headimg h1 {
+      font-size: 42px;
     }
-    #headimg h1 a {
-    }
-    #desc {
-    }
-    #headimg img {
+    #headimg div {
+      font-size: 24px;
     }
   </style>
 <?php
@@ -220,16 +230,22 @@ if ( ! function_exists( 'manning_admin_header_image' ) ) :
  * @see manning_custom_header_setup().
  */
 function manning_admin_header_image() {
-  $style        = sprintf( ' style="color:#%s;"', get_header_textcolor() );
+  $style        = sprintf( ' style="color: #%s;"', get_header_textcolor() );
   $header_image = get_header_image();
 ?>
   <div id="headimg">
-    <h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+    <h1 class="displaying-header-text"<?php echo $style; ?>><?php bloginfo( 'name' ); ?></h1>
     <div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
-    <?php if ( ! empty( $header_image ) ) : ?>
-      <img src="<?php echo esc_url( $header_image ); ?>" alt="">
-    <?php endif; ?>
   </div>
 <?php
 }
 endif; // manning_admin_header_image
+
+
+/**
+ * Load Open Sans from Google Fonts.
+ */
+function manning_custom_header_font() {
+  wp_enqueue_style( 'manning-fonts', esc_url_raw( '//fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' ) );
+}
+add_action( 'admin_print_styles-appearance_page_custom-header', 'manning_custom_header_font' );

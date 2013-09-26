@@ -70,7 +70,7 @@ if ( ! function_exists( 'manning_header_style' ) ) :
  * @see manning_custom_header_setup().
  */
 function manning_header_style() {
-  $header_image      = get_custom_header();
+  $header_image      = get_header_image();
   $header_text_color = get_header_textcolor();
 
   /**
@@ -82,46 +82,54 @@ function manning_header_style() {
 
 
   /**
-   * Look first if the custom header image was uploaded
-   * by checking for the attachment ID.  If so, work with
-   * that one to get the proper header sizes (as defined
-   * above).
+   * Continuing on…
+   * If we have a header image, get full details on it
    */
-  if ( isset( $header_image->attachment_id ) ) {
-
-    // Large
-    $header_image_wide = esc_url( $header_image->url );
-
-    // Medium
-    $header_image_medium_src = wp_get_attachment_image_src( intval( $header_image->attachment_id ), 'header-medium' );
-    if ( isset( $header_image_medium_src[0] ) ) {
-      $header_image_medium = esc_url( $header_image_medium_src[0] );
-    } else {
-      $header_image_medium = $header_image_wide;
-    }
-
-    // Small
-    $header_image_narrow_src = wp_get_attachment_image_src( intval( $header_image->attachment_id ), 'header-narrow' );
-    if ( isset( $header_image_narrow_src[0] ) ) {
-      $header_image_narrwo = esc_url( $header_image_narrow_src[0] );
-    } else {
-      $header_image_narrow = $header_image_wide;
-    }
-
-  } else {
+  if ( $header_image ) {
+    $header_image = get_custom_header();
 
     /**
-     * One of the default choices was selected.
+     * Look first if the custom header image was uploaded
+     * by checking for the attachment ID.  If so, work with
+     * that one to get the proper header sizes (as defined
+     * above).
      */
-  
-    // Large
-    $header_image_wide = esc_url( $header_image->url );
+    if ( isset( $header_image->attachment_id ) ) {
 
-    // Medium
-    $header_image_medium = esc_url( str_replace( '-wide', '-medium', $header_image->url ) );
+      // Large
+      $header_image_wide = esc_url( $header_image->url );
 
-    // Small
-    $header_image_narrow = esc_url( str_replace( '-wide', '-narrow', $header_image->url ) );
+      // Medium
+      $header_image_medium_src = wp_get_attachment_image_src( intval( $header_image->attachment_id ), 'header-medium' );
+      if ( isset( $header_image_medium_src[0] ) ) {
+        $header_image_medium = esc_url( $header_image_medium_src[0] );
+      } else {
+        $header_image_medium = $header_image_wide;
+      }
+
+      // Small
+      $header_image_narrow_src = wp_get_attachment_image_src( intval( $header_image->attachment_id ), 'header-narrow' );
+      if ( isset( $header_image_narrow_src[0] ) ) {
+        $header_image_narrwo = esc_url( $header_image_narrow_src[0] );
+      } else {
+        $header_image_narrow = $header_image_wide;
+      }
+
+    } else {
+
+      /**
+       * One of the default choices was selected.
+       */
+    
+      // Large
+      $header_image_wide = esc_url( $header_image->url );
+
+      // Medium
+      $header_image_medium = esc_url( str_replace( '-wide', '-medium', $header_image->url ) );
+
+      // Small
+      $header_image_narrow = esc_url( str_replace( '-wide', '-narrow', $header_image->url ) );
+    }
   }
 
   /**
@@ -184,9 +192,10 @@ function manning_admin_header_style() {
     }
     #headimg {
       background: url(<?php esc_url( header_image() ); ?>) no-repeat center top;
+      box-sizing: border-box;
       font-family: "Open Sans", sans-serif;
       height: 255px;
-      padding: 4em 0;
+      padding: 4em 0 0;
     }
     #headimg .displaying-header-text {
       font-weight: 400;
@@ -227,6 +236,6 @@ endif; // manning_admin_header_image
  * Load Open Sans from Google Fonts.
  */
 function manning_custom_header_font() {
-  wp_enqueue_style( 'manning-fonts', esc_url_raw('http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700') );
+  wp_enqueue_style( 'manning-fonts', esc_url_raw( '//fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' ) );
 }
 add_action( 'admin_print_styles-appearance_page_custom-header', 'manning_custom_header_font' );
