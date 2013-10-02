@@ -30,7 +30,9 @@
 
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 
-      <img src="http://placehold.it/123x123&amp;text=[logo]" class="logo" width="123" height="123">
+      <?php if ( get_option( 'logo' ) ): ?>
+      <img src="<?php echo get_option( 'logo' ); ?>" alt="" class="logo">
+      <?php endif; ?>
 
       <div class="site-branding">
         <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
