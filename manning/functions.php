@@ -57,8 +57,8 @@ function manning_setup() {
    * Setup the WordPress core custom background feature.
    */
   add_theme_support( 'custom-background', apply_filters( 'manning_custom_background_args', array(
-    'default-color' => 'ffffff',
-    'default-image' => '',
+    'default-color' => '877865',
+    'default-image' => get_template_directory_uri() . "/images/background.jpg",
   ) ) );
 }
 endif; // manning_setup
