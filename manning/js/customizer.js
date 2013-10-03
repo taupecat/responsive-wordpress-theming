@@ -50,6 +50,8 @@
 			var Color = net.brehaut.Color( to ),
 				darker = Color.darkenByRatio( 0.4 ).toString();
 
+console.log( Color );
+
 			// Update the navbar to our gradient
 			$( '.navbar' ).css( 'background-color', to ).
 				css( 'background-image', '-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, ' + to + '), color-stop(100%, ' + darker + '))' ).
