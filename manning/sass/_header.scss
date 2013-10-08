@@ -1,73 +1,73 @@
 header[role="banner"] a[rel="home"] {
-	@extend %clearfix;
+  @extend %clearfix;
 
-	background: {
-		position: center center;
-		repeat: no-repeat;
-		size: cover;
-	}
-	color: #FFFFFF;
-	display: block;
-	font-size: ce(16px, 13px);
-	padding: ce(26px, 16px) cp(60px, 320px);
-	text-align: center;
-	text-decoration: none;
+  background: {
+    position: center center;
+    repeat: no-repeat;
+    size: cover;
+  }
+  color: #FFFFFF;
+  display: block;
+  font-size: ce(16px, 13px);
+  padding: ce(26px, 16px) cp(60px, 320px);
+  text-align: center;
+  text-decoration: none;
 
-	@include bp(medium) {
-		font-size: ce(20px, 13px);
-		padding: 0;
-		text-align: left;
-	}
+  @include bp(medium) {
+    font-size: ce(20px, 13px);
+    padding: 0;
+    text-align: left;
+  }
 
-	@include bp(large) {
-		background: {
-			position: center bottom;
-			size: cover;
-		}
-		font-size: ce(24px, 13px);
-	}
+  @include bp(large) {
+    background: {
+      position: center bottom;
+      size: cover;
+    }
+    font-size: ce(24px, 13px);
+  }
 
-	.logo {
-		display: block;
-		height: auto;
-		margin: 0 auto 1em;
-		max-width: 123px;
+  .logo {
+    display: block;
+    height: auto;
+    margin: 0 auto 1em;
+    max-width: 123px;
 
-		@include bp(medium) {
-			float: left;
-			margin: ce(25px, 13px) 0 ce(25px, 13px) cp(25px, 640px);
-		}
-	}
+    @include bp(medium) {
+      float: left;
+      margin: ce(25px, 13px) 0 ce(25px, 13px) cp(25px, 640px);
+    }
+  }
 
-	@include bp(medium) {
-		.site-branding {
-			float: left;
-			margin: 0 0 ce(25px, 13px) cp(25px, 640px);
-		}
-	}
+  @include bp(medium) {
+    .site-branding {
+      float: left;
+      margin: 0 0 ce(25px, 13px) cp(25px, 640px);
+    }
+  }
 
-	.site-title, .site-description {
-		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
-	}
+  .site-title, .site-description {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+  }
 
-	.site-title {
-		font-size: ce(26px, 16px);
-		margin-bottom: ce(9px, 26px);
+  .site-title {
+    font-size: ce(26px, 16px);
+    margin-bottom: ce(9px, 26px);
 
-		@include bp(medium) {
-			font-size: ce(30px, 20px);
-			margin-top: ce(44px, 30px);
-		}
+    @include bp(medium) {
+      font-size: ce(30px, 20px);
+      margin-top: ce(44px, 30px);
+    }
 
-		@include bp(large) {
-			font-size: ce(42px, 24px);
-		}
-	}
+    @include bp(large) {
+      font-size: ce(42px, 24px);
+    }
+  }
 
-	.site-description {
+  .site-description {
 
-		@include bp(medium) {
-			margin-left: 1em;
-		}
-	}
+    @include bp(medium) {
+      margin-left: 1em;
+    }
+  }
 }
