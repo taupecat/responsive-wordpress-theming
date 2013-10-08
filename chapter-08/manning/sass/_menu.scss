@@ -4,19 +4,8 @@
 
 .navbar {
 	@extend .clear;
-	background-color: $red;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 	position: relative;
-
-	/**
-	 * Apply gradient to the navigation bar in medium viewports and up
-	 * (in narrow viewports, the menu visibility toggle receives the
-	 * gradient.)
-	 */
-
-	@include bp(medium) {
-		@include background-image(linear-gradient(top, #951c1c 0, $red 100%));
-	}
 }
 
 
@@ -43,8 +32,6 @@
 	.menu-toggle {
 		height: ce(32px, 18px);
 		line-height: ce(32px, 18px);
-
-		@include background-image(linear-gradient(top, #951c1c 0, $red 100%));
 		@include rem(font-size, 18px);
 
 		&:after {

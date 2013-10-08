@@ -29,17 +29,20 @@ header[role="banner"] a[rel="home"] {
 
   .logo {
     display: block;
+    height: auto;
     margin: 0 auto 1em;
+    max-width: 123px;
 
     @include bp(medium) {
       float: left;
-      margin: ce(25px, 13px) cp(25px, $context-medium);
+      margin: ce(25px, 13px) 0 ce(25px, 13px) cp(25px, 640px);
     }
   }
 
   @include bp(medium) {
     .site-branding {
       float: left;
+      margin: 0 0 ce(25px, 13px) cp(25px, 640px);
     }
   }
 
