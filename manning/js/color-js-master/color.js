@@ -649,9 +649,9 @@ if (!net.brehaut) { net.brehaut = {}; }
         return rgb;
       }
 
-      var h = this.hue / 60;        // sector 0 to 5
+      var h = this.hue / 60;			// sector 0 to 5
       i = Math.floor( h );
-      f = h - i;        // factorial part of h
+      f = h - i;			// factorial part of h
       p = this.value * ( 1 - this.saturation );
       q = this.value * ( 1 - this.saturation * f );
       t = this.value * ( 1 - this.saturation * ( 1 - f ) );
@@ -682,7 +682,7 @@ if (!net.brehaut) { net.brehaut = {}; }
           rgb.green = p;
           rgb.blue = this.value;
           break;
-        default:     // case 5:
+        default:		// case 5:
           rgb.red = this.value;
           rgb.green = p;
           rgb.blue = q;
