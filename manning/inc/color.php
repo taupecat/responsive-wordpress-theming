@@ -57,12 +57,16 @@ class Manning_Color {
 
 			$var_1 = 2 * $this->lightness - $var_2;
 
-			$red 	= 255 * $this->hueToRGB( $var_1, $var_2, $this->hue + ( 1 / 3 ) );
-			$green 	= 255 * $this->hueToRGB( $var_1, $var_2, $this->hue );
-			$blue 	= 255 * $this->hueToRGB( $var_1, $var_2, $this->hue - ( 1 / 3 ) );
+			$red 	= (string) dechex( 255 * $this->hueToRGB( $var_1, $var_2, $this->hue + ( 1 / 3 ) ) );
+			$green 	= (string) dechex( 255 * $this->hueToRGB( $var_1, $var_2, $this->hue ) );
+			$blue 	= (string) dechex( 255 * $this->hueToRGB( $var_1, $var_2, $this->hue - ( 1 / 3 ) ) );
+
+			if ( strlen( $red ) < 2 )	$red = '0' . $red;
+			if ( strlen( $green ) < 2 )	$green = '0' . $green;
+			if ( strlen( $blue ) < 2 )	$blue = '0' . $blue;
 
 			// Convert to Hex
-			$this->colorHex = '#' . dechex( $red ) . dechex( $green ) . dechex( $blue );
+			$this->colorHex = '#' . $red . $green . $blue;
 		}
 	}
 
