@@ -30,8 +30,8 @@
 
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 
-      <?php if ( get_option( 'logo' ) ): ?>
-      <img src="<?php echo get_option( 'logo' ); ?>" alt="" class="logo">
+      <?php if ( get_option( 'site_logo' ) ): ?>
+      <img src="<?php echo get_option( 'site_logo' ); ?>" alt="Logo" class="logo">
       <?php endif; ?>
 
       <div class="site-branding">
